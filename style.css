@@ -4,3 +4,12 @@ body,h1,h2,h3,h4,h5,h6 {
 body {
   color:black;
 }
+
+.w3-jumbo w3-hide-small {
+  color:blue;
+}
+
+
+.w3-xxlarge w3-hide-large w3-hide-medium {
+  color:blue;
+}
