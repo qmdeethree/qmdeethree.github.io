@@ -6,10 +6,14 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link rel="stylesheet" href="style.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway"}
+
+body,h1,h2,h3,h4,h5,h6 {
+
+font-family: "Raleway";
+font-weight: "bold";
+}
+
 body, html {
     height: 100%;
     line-height: 1.8;
@@ -26,10 +30,6 @@ body, html {
     padding: 16px;
 }
 
-.bgimg-1 w3-display-container w3-grayscale-min {
-	color: blue;
-}
-
 </style>
 <body>
 
@@ -39,11 +39,12 @@ body, html {
     <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#about" class="w3-bar-item w3-button">INTRO</a>
       <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-database"></i> DATA</a>
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-th"></i> METHODS</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-eye"></i> VISUALISATION</a>
+      <a href="#conclu" class="w3-bar-item w3-button"><i class="fa fa-check"></i> CONCLUSION</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -65,11 +66,11 @@ body, html {
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
-    <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+  <div class="w3-display-left w3-text-black" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Disease, Dollar, Data</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium" color="black">Disease, Dollar, Data</span><br>
+    <span class="w3-large">An analysis by Daisy, India, José, Thomas and Justas</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Explore our story</a></p>
   </div>
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -83,28 +84,34 @@ body, html {
 
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center">ABOUT THE COMPANY</h3>
-  <p class="w3-center w3-large">Key features of our company</p>
+  <h3 class="w3-center">Vision and Motivation</h3>
+  <p class="w3-center w3-large">Exploring what living with poverty entails in a big city </p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-quarter">
-      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Responsive</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <i class="fa fa-book w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Literature</p>
+      <p>It is a consensus in literature that living with impoverished conditions - in other words, people that have low incomes - entails living with other negative socioeconomic factors such as increased mortality, low school attendance, low health in relation to higher income people (Evans & English, 2002; Tilak, 2002).
+</p>
     </div>
     <div class="w3-quarter">
-      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Passion</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <i class="fa fa-calendar w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">However...</p>
+      <p>However, the factors that are correlated with poverty are not consistent over time and space. They differ due to the political systems, the welfare state and the general state of the economy in a given period in a given place.
+</p>
     </div>
     <div class="w3-quarter">
-      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Design</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <i class="fa fa-building w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">City Focus</p>
+      <p>There are very few studies that have focused on exploring what living with poverty entails in specific cities. However, only by knowing this can we aim to apply policies that truly improve the lives of individuals and families living with low incomes.
+</p>
     </div>
     <div class="w3-quarter">
-      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Support</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+      <i class="fa fa-eye w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Conclusion</p>
+      <p>Our motivation is therefore to understand what living with poverty in London entails.
+
+Our vision is to be able to provide the general public as well as policy makers with information that can benefit the way we approach poverty in London.
+.</p>
     </div>
   </div>
 </div>
