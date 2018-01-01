@@ -14,6 +14,10 @@ font-family: "Raleway";
 font-weight: "bold";
 }
 
+h3 {
+text-decoration:underline;
+}
+
 body, html {
     height: 100%;
     line-height: 1.8;
@@ -33,14 +37,36 @@ body, html {
 </style>
 <body>
 
+
+<div class="w3-right w3-hide-small">
+    <div class="w3-dropdown-hover">
+    <a href="#about"><button class="w3-button w3-white">ABOUT</button></a>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+    <a href="#about" class="w3-bar-item w3-button">AAH</a>
+    <a href="#aboot" class="w3-bar-item w3-button">VAM</a>
+    </div>
+    </div>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
     <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">INTRO</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+    <div class="w3-dropdown-hover">
+<a href="#about"><button class="w3-button w3-white">INTRO</button></a>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+    <a href="#team" class="w3-bar-item w3-button">Meet the Team</a>
+    <a href="#about" class="w3-bar-item w3-button">Vision and Motivation</a>
+    <a href="#aboot" class="w3-bar-item w3-button">Aims and Hypotheses</a>
+
+    </div>
+    </div>
       <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-database"></i> DATA</a>
       <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-th"></i> METHODS</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-eye"></i> VISUALISATION</a>
@@ -82,60 +108,8 @@ body, html {
   </div>
 </header>
 
-<!-- About Section -->
-<div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center">Vision and Motivation</h3>
-  <p class="w3-center w3-large">Exploring what living with poverty entails in a big city </p>
-  <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-quarter">
-      <i class="fa fa-book w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Literature</p>
-      <p>It is a consensus in literature that living with impoverished conditions - in other words, people that have low incomes - entails living with other negative socioeconomic factors such as increased mortality, low school attendance, low health in relation to higher income people (Evans & English, 2002; Tilak, 2002).
-</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-calendar w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">However...</p>
-      <p>However, the factors that are correlated with poverty are not consistent over time and space. They differ due to the political systems, the welfare state and the general state of the economy in a given period in a given place.
-</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-building w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">City Focus</p>
-      <p>There are very few studies that have focused on exploring what living with poverty entails in specific cities. However, only by knowing this can we aim to apply policies that truly improve the lives of individuals and families living with low incomes.
-</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-eye w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Conclusion</p>
-      <p>Our motivation is therefore to understand what living with poverty in London entails.
-
-Our vision is to be able to provide the general public as well as policy makers with information that can benefit the way we approach poverty in London.
-</p>
-    </div>
-  </div>
-</div>
-
-<!-- Promo Section - "We know design" -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>Aims, Hypotheses and Assumptions</h3>
-      <p>Our aim is to explore what correlates with poverty - as measured by income - in London. We will look at various variables that represent a spectrum of factors that have been shown to be correlated with poverty in different settings, such as health, physical activity, and availability of green spaces.
-
-This data is organised and measured by borough (Barking and Dagenham, Barnet, Bexley, Brent, Bromley, Camden, City of London*, Croydon, Ealing, Enfield, Greenwich, Hackney, Hammersmith and Fulham, Haringey, Harrow, Havering, Hillingdon, Hounslow, Islington, Kensington and Chelsea, Kingston upon Thames, Lambeth, Lewisham, Merton, Newham, Redbridge, Richmond upon Thames, Southwark, Sutton, Tower Hamlets, Waltham Forest, Wandsworth, Westminster.)
-<br>*The City of London is the 33rd principal division of Greater London but it is not a borough. For our purposes, however, we will be treating it as such.</br>
-</p>
-
-    </div>
-    <div class="w3-col m6">
-      <img class="w3-image w3-round-large" src="buildings.jpg" alt="Buildings" width="700" height="394">
-    </div>
-  </div>
-</div>
-
 <!-- Team Section -->
-<div class="w3-container" id="team">
+<div class="w3-container w3-light-grey" id="team">
   <h3 class="w3-center">THE TEAM</h3>
   <p class="w3-center w3-large">The team behind the vision</p>
   <div class="w3-row-padding" style="margin-left:190px">
@@ -191,6 +165,69 @@ This data is organised and measured by borough (Barking and Dagenham, Barnet, Be
     </div>
   </div>
 </div>
+
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">Vision and Motivation</h3>
+  <p class="w3-center w3-large">Exploring what living with poverty entails in a big city </p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-book w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Literature</p>
+      <p>It is a consensus in literature that living with impoverished conditions - in other words, people that have low incomes - entails living with other negative socioeconomic factors such as increased mortality, low school attendance, low health in relation to higher income people (Evans & English, 2002; Tilak, 2002).
+</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-calendar w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">However...</p>
+      <p>However, the factors that are correlated with poverty are not consistent over time and space. They differ due to the political systems, the welfare state and the general state of the economy in a given period in a given place.
+</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-building w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">City Focus</p>
+      <p>There are very few studies that have focused on exploring what living with poverty entails in specific cities. However, only by knowing this can we aim to apply policies that truly improve the lives of individuals and families living with low incomes.
+</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-eye w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Conclusion</p>
+      <p>Our motivation is therefore to understand what living with poverty in London entails.
+
+Our vision is to be able to provide the general public as well as policy makers with information that can benefit the way we approach poverty in London.
+</p>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section - "We know design" -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="aboot">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>Aims, Hypotheses and Assumptions</h3>
+      <p>Our aim is to explore what correlates with poverty - as measured by income - in London. We will look at various variables that represent a spectrum of factors that have been shown to be correlated with poverty in different settings, such as health, physical activity, and availability of green spaces.
+
+This data is organised and measured by borough (Barking and Dagenham, Barnet, Bexley, Brent, Bromley, Camden, City of London*, Croydon, Ealing, Enfield, Greenwich, Hackney, Hammersmith and Fulham, Haringey, Harrow, Havering, Hillingdon, Hounslow, Islington, Kensington and Chelsea, Kingston upon Thames, Lambeth, Lewisham, Merton, Newham, Redbridge, Richmond upon Thames, Southwark, Sutton, Tower Hamlets, Waltham Forest, Wandsworth, Westminster.)
+<br>*The City of London is the 33rd principal division of Greater London but it is not a borough. For our purposes, however, we will be treating it as such.</br>
+</p>
+
+<p1>We have various hypotheses. These are:
+<li>Higher levels poverty in a borough will correlate with lower levels of green spaces</li>
+<li>Higher levels of poverty in a borough will correlate with lower levels of physical activity of children attending school</li>
+<li>Higher levels of poverty in a borough will correlate with lower life expectancy</li>
+<li>Higher levels of poverty in a borough will correlate with higher levels of drug use</li></p1>
+<p>We assume that the factors investigated are representative of wider thematics. For example, we assume that area of green space is a valid indicator of environmental quality; physical activity of children in schools is a valid indicator of both physical activity and quality of education; life expectancy and drug use are valid indicators of health. While we acknowledge that none of the wider thematics can be reduced to these indicators alone, we believe the indicators chosen reveal relevant and important information concerning these areas.
+
+</p>
+
+    </div>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="buildings.jpg" alt="Buildings" width="700" height="394">
+    </div>
+  </div>
+</div>
+
 
 <!-- Promo Section "Statistics" -->
 <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
