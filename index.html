@@ -14,9 +14,12 @@ font-family: "Raleway";
 font-weight: "bold";
 }
 
+
+
 h3 {
 text-decoration:underline;
 }
+
 
 body, html {
     height: 100%;
@@ -38,19 +41,6 @@ body, html {
 <body>
 
 
-<div class="w3-right w3-hide-small">
-    <div class="w3-dropdown-hover">
-    <a href="#about"><button class="w3-button w3-white">ABOUT</button></a>
-    <div class="w3-dropdown-content w3-bar-block w3-card-4">
-    <a href="#about" class="w3-bar-item w3-button">AAH</a>
-    <a href="#aboot" class="w3-bar-item w3-button">VAM</a>
-    </div>
-    </div>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
-    </div>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -64,11 +54,21 @@ body, html {
     <a href="#team" class="w3-bar-item w3-button">Meet the Team</a>
     <a href="#about" class="w3-bar-item w3-button">Vision and Motivation</a>
     <a href="#aboot" class="w3-bar-item w3-button">Aims and Hypotheses</a>
+    <a href="#litrev" class="w3-bar-item w3-button">Literature Review</a>
 
     </div>
     </div>
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-database"></i> DATA</a>
-      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-th"></i> METHODS</a>
+    <div class="w3-dropdown-hover">
+<a href="#data"><button class="w3-button w3-white"><i class="fa fa-database"></i>DATA</button></a>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+    <a href="#data" class="w3-bar-item w3-button">Data Sources & Reliability</a>
+    <a href="#datarep" class="w3-bar-item w3-button">Datasets</a>
+    <a href="#dataprob" class="w3-bar-item w3-button">Problems</a>
+    <a href="#ethcon" class="w3-bar-item w3-button">Ethical considerations</a>
+
+    </div>
+    </div>
+      <a href="#methods" class="w3-bar-item w3-button"><i class="fa fa-th"></i> METHODS</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-eye"></i> VISUALISATION</a>
       <a href="#conclu" class="w3-bar-item w3-button"><i class="fa fa-check"></i> CONCLUSION</a>
     </div>
@@ -83,19 +83,19 @@ body, html {
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">INTRO</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">DATA</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">METHODS</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">VISUALISATION</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONCLUSION</a>
 </nav>
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-left w3-text-black" style="padding:48px">
     <span class="w3-jumbo w3-hide-small">Disease, Dollar, Data</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium" color="black">Disease, Dollar, Data</span><br>
-    <span class="w3-large">An analysis by Daisy, India, José, Thomas and Justas</span>
+
+    <span class="w3-large"><b>Down and out in London: an analysis by Daisy, India, José, Thomas and Justas</b></span>
     <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Explore our story</a></p>
   </div>
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
@@ -109,7 +109,7 @@ body, html {
 </header>
 
 <!-- Team Section -->
-<div class="w3-container w3-light-grey" id="team">
+<div id="team"class="w3-container w3-light-grey" style="padding:100px 16px">
   <h3 class="w3-center">THE TEAM</h3>
   <p class="w3-center w3-large">The team behind the vision</p>
   <div class="w3-row-padding" style="margin-left:190px">
@@ -230,59 +230,53 @@ This data is organised and measured by borough (Barking and Dagenham, Barnet, Be
 
 
 <!-- Promo Section "Statistics" -->
-<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">14+</span>
-    <br>Partners
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">55+</span>
-    <br>Projects Done
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">89+</span>
-    <br>Happy Clients
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">150+</span>
-    <br>Meetings
-  </div>
+<div class="w3-container w3-grey" style="padding:128px 16px" id="litrev">
+
+<h3 class="w3-center">Literature Review</h3>
+  <p class="w3-center w3-large">How does poverty relate to other living factors (pollution, health, education) in London?</p>
+    <div class="w3-row-padding" style="margin-top:32px">
+
+ <p>Poverty - or low income - is considered to be a deciding factor in defining one's socioeconomic status. Many studies have investigated what poverty is associated with; specifically, what other aspects influence the life of people that live in poverty.</p>
+
+<p>Poverty has been shown to be related to many social aspects (Hsieh and Pugh, 1993) such as increase in crime (Hsieh and Pugh, 1993), decrease in health (Craig and Sonia, 2002; (Kaplan and Keil, 1993), decrease in education (Stephen J. Caldas & Carl Bankston (1997)), and increase in pollution (Susan A. Perlin , David Wong & Ken Sexton, 2001; McLeod et al. 2000). As such, people that live with poverty tend to have lower qualities of life - not only because they have low incomes but because of many other social factors that are associated with this.</p>
+
+<p>More than being related to poverty, research has shown that a lot of these aspects decrease the ability of people getting out of poverty. Poverty has been shown in many cities to be related not only to individuals choices but to structural problems (Kasarda and Ting, 1996). In other words, people with poverty live with a lot of other problems that undermine their ability of getting out of poverty. So these aspects, such as low health and low education, affect not only individual's general wellbeing but their ability to improve their lives.</p>
+
+<img src="https://surfaceview.s3.amazonaws.com/spree/products/12223/large/MOL0085-S4W-SV-Edits-Wall-Prints-2-Fold-2200x1750.png?1424169622" height="425" width="auto" alt="Image" style="float: left; margin: 4px 10px 0px 0px">
+
+
+<p>So knowing what aspects of life are associated with poverty is essential for two reasons. First, it allows us to improve the lives of people in poverty. Second, it allows us to improve the chances of these people getting out of poverty. By understanding all the variables at play we can work towards a comprehensive policy making that truly improves all the aspects that are negatively affecting low income people’s lives and aims at tackling the structural problems at place.</p>
+
+<p>But what aspects of life are associated with poverty varies from place to place (McLeod et al. 2000). This is due to different policies in place e.g. US has a lot of income inequality which can be related to their tax policies. Different countries treat minorities differently e.g. African americans in the US suffer a lot and are disproportionately affect due to health risks as they are much more likely to live next to waste hazard facilities (Williams and Collins, 1995). Cultural differences also play a role (Brion et al. 2011). In some countries the culture of family is stronger therefore there is a family safety net regardless of the income of individuals.</p>
+
+<p>So even though we have a general understanding that poverty related to other aspects from the literature. Knowing what aspects and therefore how to create policies to improve the living conditions of these individuals can only really be accessed at a local level. So far very few studies have focused on specific cities such as London.
+In conclusion, the current literature highlights that knowing what associates with poverty is essential to improve the life of low income individuals as well as to increase their ability to get out of poverty. More so, it highlights that this should be done at the local level such as cities as policies vary a lot from country to country as well as relations to minority groups and culture.</p>
+
+
+</div>
 </div>
 
 <!-- Work Section -->
-<div class="w3-container" style="padding:128px 16px" id="work">
-  <h3 class="w3-center">OUR WORK</h3>
-  <p class="w3-center w3-large">What we've done for people</p>
+<div class="w3-container" style="padding:128px 16px" id="data">
+  <h3 class="w3-center">DATA</h3>
+  <p class="w3-center w3-large">Where did the data come from?</p>
+<p class="w3-center"> All of our data came from the London Data Store (LDS), an official and local body for Greater London which consists of the Mayor of London, currently Sadiq Khan (Labour) and the London Assembly, all of whom are elected by the people.
+</p>
+ <p class="w3-center w3-large">Is the London Data Store a reliable source?</p>
+<p class="w3-center">Being published by an official, reputable and accountable source gives the impression that the data is reliable. However, we remain aware that data collected under government parties (as it is currently) means there may be a political agenda underlying it. For example, Sadiq Khan is very outspoken about his wishes to clean London’s air and so may manipulate the data to make air quality seem worse than it actually is. However we feel this would be difficult to do, as the London Assembly are elected to examine decisions and actions taken by the Mayor, who they hold publicly and democratically accountable. </p>
+</div>
 
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_mic.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_phone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_drone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_sound.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
-    </div>
-  </div>
+<div class="w3-container w3-light-grey w3-border" style="padding:128px 16px" id="datarep">
+ <p class="w3-center w3-large">Why did we choose these datasets and what do they represent?</p>
+ <p class="w3-center">List of datasets we used (perhaps images?) and explanation of what they show (link to literature review.)</p></div>
+<div class="w3-container" style="padding:128px 16px" id="dataprob">
+<p class="w3-center w3-large">What problems were encountered regarding the data?</p>
+<p class="w3-center">The majority of our issues arised in the data cleaning process. Due to the internationalisation on some of our laptops, converting ExCel files to CSV was difficult and we lost some data during the conversion. To work around this however, we would copy-paste the data from ExCel into Google Sheets, and export it into a CSV from there. After that it could be easily uploaded and manipulated on Python via Azure Notebooks.
+</p>
+<p class="w3-center">Due to the City of London's status as a "principal division" (rather than Borough) of London, its data was occasionally not included in our chosen datasets. This was the case with our "Active Kids" and "Life Expectancy" datasets. As such, we had to estimate what the missing values may have been; we considered this to be similiar or the same as the next richest Borough.</p>
 
-  <div class="w3-row-padding w3-section">
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_tablet.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_camera.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_typewriter.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
-    </div>
-  </div>
+</div>
+</div>
 </div>
 
 <!-- Modal for full size images on click-->
