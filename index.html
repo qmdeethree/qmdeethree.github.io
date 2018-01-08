@@ -68,27 +68,27 @@ body, html {
     <div class="w3-dropdown-hover">
 <a href="#methods"><button class="w3-button w3-white"><i class="fa fa-cogs"></i>METHODS</button></a>
     <div class="w3-dropdown-content w3-bar-block w3-card-4">
-      <a href="#stats" class="w3-bar-item w3-button">Data and Statistics</a>
+      <a href="#methods" class="w3-bar-item w3-button">Data and Statistics</a>
       <a href="#limits" class="w3-bar-item w3-button">Visualisations</a>
-      <a href="#statanalysis" class="w3-bar-item w3-button">Website</a>
+      <a href="#website" class="w3-bar-item w3-button">Website</a>
     </div>
     </div>
 
 
     <div class="w3-dropdown-hover">
-<a href="#visual"><button class="w3-button w3-white"><i class="fa fa-eye"></i>VISUALISATION</button></a>
+<a href="#datavis"><button class="w3-button w3-white"><i class="fa fa-eye"></i>VISUALISATION</button></a>
     <div class="w3-dropdown-content w3-bar-block w3-card-4">
-
+      <a href="#datavis" class="w3-bar-item w3-button">Data</a>
+      <a href="#scatter" class="w3-bar-item w3-button">Scatter plots</a>
+      <a href="#maps" class="w3-bar-item w3-button">Maps</a>
     </div>
     </div>
 
     <div class="w3-dropdown-hover">
-<a href="#stats"><button class="w3-button w3-white"><i class="fa fa-th"></i>STATS</button></a>
+<a href="#statanalysis"><button class="w3-button w3-white"><i class="fa fa-th"></i>STATS</button></a>
     <div class="w3-dropdown-content w3-bar-block w3-card-4">
-    <a href="#stats" class="w3-bar-item w3-button">Methods of Analysis</a>
-    <a href="#limits" class="w3-bar-item w3-button">Limitations</a>
     <a href="#statanalysis" class="w3-bar-item w3-button">Statistical Analysis</a>
-    <a href="#discuss" class="w3-bar-item w3-button">Discussion</a>
+    <a href="#discuss" class="w3-bar-item w3-button">Discussion of Results</a>
 
     </div>
     </div>
@@ -335,9 +335,9 @@ In conclusion, the current literature highlights that knowing what associates wi
   </div>
 </div>
 
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="stats">
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="methods">
 
-<h3 class="w3-center">Statististical Methods</h3>
+<h3 class="w3-center">Statistical Methods</h3>
     <div class="w3-row-padding" style="margin-top:32px">
     <p><b>What we used:</b>
 <br>We had 4 different variables that we wanted to compare to average income in a London borough. We wanted to see if there was a correlation between the wealth of the borough – as estimated by the average income – and the variable (for example: if average income correlated with life expectancy).
@@ -368,21 +368,64 @@ In conclusion, the current literature highlights that knowing what associates wi
 <p>In Figure 1, the graph of the relationship between X and Y never has a negative gradient.
 <br>The Spearman Correlation Coefficient can show us if there is a strong relationship between the variables, even if that relationship is non-linear. For a strong positive correlation between variables, even if the correlation is not consistent, the Spearman Correlation Coefficient will give a value close to 1.
 <br>The Spearman Correlation Coefficient is calculated in the same way as the Pearson, however the values are ranked using Spearman’s rank first. In our investigation this just meant each borough was given a number 1 to 32 (as there are 32 London boroughs), for income and for each variable, (e.g. Life Expectancy) and then the Correlation Coefficient was calculated from these rankings.
-</p></div></div>
-
-<div class="w3-container w3-grey" style="padding:128px 16px" id="limits">
-
-<h3 class="w3-center">Limitations</h3>
-    <div class="w3-row-padding" style="margin-top:32px">
-    <p>The Pearson Correlation Coefficient only produces a meaningful value to measure the strength of correlation if the variables are linearly correlated, this is why we calculated the Spearman coefficient as well.
-    <img src="https://lh4.googleusercontent.com/w0B7WkWQ_fDj3oTEUpvMNM0pFwCooIsxXnlg5zFIqckOZCEtysS-36sfX-DlECLukMuL6Px9fcWaX1R9aHg-e46RI8U7P3m_3ySMneUdz6Z8j7k0-silHLHICSFhhi2GXCubhJF9" alt="Image" style="float: left; margin: 4px 10px 0px 0px">
+<br></p>
+<p class="w3-large">Limitations</p>
+<p>The Pearson Correlation Coefficient only produces a meaningful value to measure the strength of correlation if the variables are linearly correlated, this is why we calculated the Spearman coefficient as well.
+<img src="https://lh4.googleusercontent.com/w0B7WkWQ_fDj3oTEUpvMNM0pFwCooIsxXnlg5zFIqckOZCEtysS-36sfX-DlECLukMuL6Px9fcWaX1R9aHg-e46RI8U7P3m_3ySMneUdz6Z8j7k0-silHLHICSFhhi2GXCubhJF9" alt="Image" style="float: left; margin: 4px 10px 0px 0px">
 
 <br>Furthermore, the Pearson Correlation Coefficient is particularly sensitive to outliers (“Pearson Product-Moment Correlation - Guidelines to interpretation of the coefficient, detecting outliers and the type of variables needed.,” n.d.). The Spearman Coefficient is also more robust in this respect, however we will still consider this sensitivity when interpreting our results, and if appropriate, remove extreme outliers from the dataset.
 <br>The Spearman, like the Pearson Correlation Coefficient does not account for any relationship that is non-monotonic, for example, the relationship shown in Figure 2, would produce a Spearman and Pearson coefficient equal to 0.
 </p>
 <p>The Spearman coefficient is more robust to extreme outliers than the Pearson coefficient because it limits the value of the outlier to its rank. However, it can’t tell us whether the relationship between the variables is linear or otherwise. Furthermore, the ranking washes out some of the correlation, as we can no longer tell how much Y increased as a result of X. We can interpret the Spearman Correlation Coefficient to be how sure we are that there is a correlation, and the Pearson Correlation Coefficient to represent how linear the relationship is.
 </p>
-    </div></div>
+</div></div>
+
+<div class="w3-container w3-grey" style="padding:128px 16px" id="limits">
+
+<h3 class="w3-center">Visualisations</h3>
+    <div class="w3-row-padding" style="margin-top:32px">
+    <p>holaaaaaaa
+</p>
+
+</div></div>
+
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="website">
+
+<h3 class="w3-center">Website</h3>
+    <div class="w3-row-padding" style="margin-top:32px">
+    <p>How i designed the website mmmmm
+</p>
+
+</div></div>
+
+<div class="w3-container" style="padding:128px 16px" id="datavis">
+
+<h3 class="w3-center">Visualising the Data</h3>
+    <div class="w3-row-padding" style="margin-top:32px">
+    <p>b a r charts hello everyone i love u
+</p>
+
+</div></div>
+
+<div class="w3-container w3-grey" style="padding:128px 16px" id="scatter">
+
+<h3 class="w3-center">Scatter Plots</h3>
+    <div class="w3-row-padding" style="margin-top:32px">
+    <p>yassss SCATAAAAAAAAAAAA
+</p>
+
+</div></div>
+
+
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="maps">
+
+<h3 class="w3-center">Visualising Maps</h3>
+    <div class="w3-row-padding" style="margin-top:32px">
+    <p>justassssssss
+</p>
+
+</div></div>
+
 
   <div class="w3-container" style="padding:128px 16px" id="statanalysis">
 
@@ -476,6 +519,12 @@ The following figure shows data on income next to data on life expectancy.
 </p>
     </div></div>
 
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="gift">
+
+<h3 class="w3-center">gift</h3>
+    <div class="w3-row-padding" style="margin-top:32px">
+
+</div></div>
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64" id="biblio">
 <p>To view our bibliography, please click <a href="https://docs.google.com/document/d/1HUcIRiyAdvr0ybZeVlgzszQ1a3BlYQejmSnQDd4YX88/edit?usp=sharing">here</a></p>
