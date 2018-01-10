@@ -567,9 +567,9 @@ In conclusion, the current literature highlights that knowing what associates wi
 </div></div>
 
 
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="visualisation">
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="maps">
   <h3 class="w3-center">VISUALISATIONS</h3>
-  <p class="w3-center w3-large">5 D3 Visualisations and 1 three.js</p>
+  <p class="w3-center w3-large">D3.js and three.js Visualisations</p>
   <!-- <div class="w3-row-padding" style="margin-top:64px"> -->
 
   <div id="centerDefault">
@@ -727,31 +727,6 @@ In conclusion, the current literature highlights that knowing what associates wi
         updateYear();
         var timer = undefined;
 
-        // function playClick() {
-        //   if (timer) {
-        //     stop();
-        //   } else {
-        //     if (year == borough_stats2.maxYear) year = borough_stats2.minYear;
-        //     $(yearSliderDefault).slider('value', year);
-        //     $(play).attr("src", 'stop.png');
-        //     updateYear();
-        //     vis.render();
-        //     timer = setInterval(function() {
-        //       year++;
-        //       if (year >= borough_stats2.maxYear) stop();
-        //       $(yearSliderDefault).slider('value', year);
-        //       updateYear();
-        //       vis.render();
-        //     }, 400);
-        //   }
-        // }
-        //
-        // // Stop the animation
-        // function stop() {
-        //   clearInterval(timer);
-        //   timer = undefined;
-        //   $(play).attr("src", 'play.png');
-        // }
         var cats = ["Income", "Life Expectancy", "Green Spaces", "Active Kids",	"Drugs"];
         //check this collission constraint for possible solution
         var collisionConstraint = pv.Constraint.collision(function(d) d.r + 1),
@@ -815,46 +790,6 @@ In conclusion, the current literature highlights that knowing what associates wi
           .text(function(d) "> £"+d);
 
 
-          // var trick=0;
-          // var treat=0;
-          // function scaleViz(){
-          //   trick=1;
-          //
-          //   vis.add(pv.Dot)
-          //       .data([
-          //           {v: 10000000, l: "10M"},
-          //           {v: 1000000, l: "1M"},
-          //           {v: 5000000, l: "5M"},
-          //           {v: 100000, l: "100K"}
-          //         ])
-          //       .fillStyle(null)
-          //       .strokeStyle("#000000")
-          //       .left(150)
-          //       .bottom(-30)
-          //       .radius(function(d) numToRad(d.v))
-          //     .anchor("top").add(pv.Label)
-          //       .text(function(d) d.l)
-          // }
-          //
-          // function deScaleViz(){
-          //
-          // treat=1;
-          //   vis.add(pv.Dot)
-          //       .data([
-          //           {v: 10000000, l: "10M"},
-          //           {v: 1000000, l: "1M"},
-          //           {v: 5000000, l: "5M"},
-          //           {v: 100000, l: "100K"}
-          //         ])
-          //       .fillStyle(null)
-          //       .strokeStyle("#e0e0e0")
-          //       .left(150)
-          //       .bottom(-30)
-          //       .radius(function(d) numToRad(d.v))
-          //     .anchor("top").add(pv.Label)
-          //       .text(function(d) d.l)
-          // }
-
 
 
         ease = setInterval(function() {
@@ -863,19 +798,6 @@ In conclusion, the current literature highlights that knowing what associates wi
             ease = null;
           }
 
-            // if(year==2006){
-            //   trick++;
-            //   if(trick<2){
-            //     scaleViz();
-            //     treat=0;}
-            //   }
-            // else{
-            //   treat++;
-            //   if(treat<2){
-            //       deScaleViz();
-            //       trick=0;}
-            // }
-            //
 
 
           sim.step();
@@ -892,6 +814,7 @@ In conclusion, the current literature highlights that knowing what associates wi
   </div>
 
   <div style="border: 0px solid blue; margin-left: 60%; margin-right: 5%">
+
     <h1>Reimagining visualising income</h1>
     <h3>A Dorling Cartogram</h3>
     <p>
@@ -907,11 +830,6 @@ In conclusion, the current literature highlights that knowing what associates wi
 
 
 
-  <div id="canvas123">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.js"></script>
-    <script src="threeVisualisation.js"></script>
-  </div>
 
 
   <div class="w3-container" style="padding:128px 16px" id="statanalysis">
@@ -1006,20 +924,33 @@ The following figure shows data on income next to data on life expectancy.
 </p>
     </div></div>
 
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="gift">
 
-<h3 class="w3-center">gift</h3>
-    <div class="w3-row-padding" style="margin-top:32px">
-
-</div></div>
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64" id="biblio">
+<div class="w3-center w3-black w3-padding-64" id="biblio">
 <p>To view our bibliography, please click <a href="https://docs.google.com/document/d/1HUcIRiyAdvr0ybZeVlgzszQ1a3BlYQejmSnQDd4YX88/edit?usp=sharing">here</a></p>
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
 
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a> Created by QM Group 5™</p>
-</footer>
+  <p>Created by QM Group 5™</p>
+</div>
 
+<!-- at the very bottom -->
+  <div id="canvas123">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.js"></script>
+    <script src="threeVisualisation.js"></script>
+  </div>
+  <h3 class="w3-center" id="gift">gift</h3>
+
+<!-- <div class="w3-container w3-light-grey">
+
+
+
+
+    <div class="w3-row-padding" style="margin-top:32px"> -->
+
+
+
+</div></div>
 
 <!-- Add Google Maps -->
 <script>
