@@ -2,10 +2,128 @@
 <html>
 <title>D3</title>
 <meta charset="UTF-8">
+<style type="text/css">
+  .gm-err-container {
+    height: 100%;
+    width: 100%;
+    display: table;
+    background-color: #e0e0e0;
+    position: relative;
+    left: 0;
+    top: 0
+  }
+
+  .gm-err-content {
+    border-radius: 1px;
+    padding-top: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: static;
+    vertical-align: middle;
+    display: table-cell
+  }
+
+  .gm-err-content a {
+    color: #4285f4
+  }
+
+  .gm-err-icon {
+    text-align: center
+  }
+
+  .gm-err-title {
+    margin: 5px;
+    margin-bottom: 20px;
+    color: #616161;
+    font-family: Roboto, Arial, sans-serif;
+    text-align: center;
+    font-size: 24px
+  }
+
+  .gm-err-message {
+    margin: 5px;
+    color: #757575;
+    font-family: Roboto, Arial, sans-serif;
+    text-align: center;
+    font-size: 12px
+  }
+
+  .gm-err-autocomplete {
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-size: 15px 15px
+  }
+</style>
+<style type="text/css">
+  .gm-style .gm-style-mtc label,
+  .gm-style .gm-style-mtc div {
+    font-weight: 400
+  }
+</style>
+<link type="text/css" rel="stylesheet" href="./D3_files/css">
+<style type="text/css">
+  .gm-style .gm-style-cc span,
+  .gm-style .gm-style-cc a,
+  .gm-style .gm-style-mtc div {
+    font-size: 10px
+  }
+</style>
+<style type="text/css">
+  @media print {
+    .gm-style .gmnoprint,
+    .gmnoprint {
+      display: none
+    }
+  }
+
+  @media screen {
+    .gm-style .gmnoscreen,
+    .gmnoscreen {
+      display: none
+    }
+  }
+</style>
+<style type="text/css">
+  .gm-style-pbc {
+    transition: opacity ease-in-out;
+    background-color: rgba(0, 0, 0, 0.45);
+    text-align: center
+  }
+
+  .gm-style-pbt {
+    font-size: 22px;
+    color: white;
+    font-family: Roboto, Arial, sans-serif;
+    position: relative;
+    margin: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%)
+  }
+</style>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <link type="text/css" rel="stylesheet" href="./Dorling Cartogram_files/ex.css">
+  <!-- unnecessary -->
+  <link type="text/css" rel="stylesheet" href="./Dorling Cartogram_files/jquery-ui-1.8rc3.custom.css">
+  <link type="text/css" rel="stylesheet" href="./Dorling Cartogram_files/D3Styles.css">
+
+  <script type="text/javascript" src="./Dorling Cartogram_files/protovis-r3.2.js"></script>
+  <script type="text/javascript" src="./Dorling Cartogram_files/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="./Dorling Cartogram_files/jquery-ui-1.8rc3.custom.min.js"></script>
+  <script type="text/javascript" src="./Dorling Cartogram_files/centroid.js"></script>
+
+
+  <script type="text/javascript" src="./Dorling Cartogram_files/borough_lowres2.js"></script>
+  <script type="text/javascript" src="./Dorling Cartogram_files/borough_stats2.js"></script>
+  <script type="text/javascript" src="./Dorling Cartogram_files/borough_borders2.js"></script>
+
 <style>
 
 body,h1,h2,h3,h4,h5,h6 {
@@ -37,7 +155,39 @@ body, html {
     padding: 16px;
 }
 
+
+    #canvas123 {
+      background-color: #000;
+      width: 100%;
+      height: 100%;
+      /*height: 200px;*/
+      /*border: 5px solid red;*/
+      /*margin: 100px;*/
+      /*padding: 0px;*/
+      position: static;
+      /* fixed or static */
+      /*top: 100px;
+   left: 100px;*/
+      overflow: hidden;
+    }
 </style>
+<script type="text/javascript" charset="UTF-8" src="./D3_files/common.js"></script>
+<script type="text/javascript" charset="UTF-8" src="./D3_files/map.js"></script>
+<script type="text/javascript" charset="UTF-8" src="./D3_files/util.js"></script>
+<script type="text/javascript" charset="UTF-8" src="./D3_files/marker.js"></script>
+<style type="text/css">
+  .gm-style {
+    font: 400 11px Roboto, Arial, sans-serif;
+    text-decoration: none;
+  }
+
+  .gm-style img {
+    max-width: none;
+  }
+</style>
+<script type="text/javascript" charset="UTF-8" src="./D3_files/onion.js"></script>
+<script type="text/javascript" charset="UTF-8" src="./D3_files/controls.js"></script>
+<script type="text/javascript" charset="UTF-8" src="./D3_files/stats.js"></script>
 <body>
 
 
@@ -128,7 +278,7 @@ body, html {
     <span class="w3-jumbo w3-hide-small">Disease, Dollar, Data</span><br>
 
     <span class="w3-large"><b>Down and out in London: an analysis by Daisy, India, José, Thomas and Justas</b></span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Explore our story</a></p>
+    <p><a href="#about" style=" border: 5px red solid;" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Explore our story</a></p>
   </div>
   <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -191,7 +341,7 @@ body, html {
         <div class="w3-container">
           <h3>Justas </h3>
           <p class="w3-opacity">Visualisation jedi</p>
-          <p>if found please return to the bartlett (22 Gordon St, London)</p>
+          <p>If found please return to the Bartlett (22 Gordon St, London)</p>
         </div>
       </div>
     </div>
@@ -417,14 +567,351 @@ In conclusion, the current literature highlights that knowing what associates wi
 </div></div>
 
 
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="maps">
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="visualisation">
+  <h3 class="w3-center">VISUALISATIONS</h3>
+  <p class="w3-center w3-large">5 D3 Visualisations and 1 three.js</p>
+  <!-- <div class="w3-row-padding" style="margin-top:64px"> -->
 
-<h3 class="w3-center">Visualising Maps</h3>
-    <div class="w3-row-padding" style="margin-top:32px">
-    <p>justassssssss
-</p>
+  <div id="centerDefault">
 
-</div></div>
+    <div id="figDefault">
+      <div id="containerDefault">
+
+        <b style="" id="yearLabelDefault"> Categories: </b>
+        <!-- class name unnecessary -->
+        <!-- <div style=" " id="yearSliderGreen" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><a href="http://mbostock.github.io/protovis/ex/cartogram-full.html#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a></div> -->
+        <div style="" id="yearSliderDefault">
+          <!-- border: 5px green solid; -->
+          <!-- <a href="http://mbostock.github.io/protovis/ex/cartogram-full.html#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 100%;"></a> -->
+        </div>
+        <!-- <img id="playDefault" src="./Dorling Cartogram_files/play.png" alt="Play" onclick="playClick()"> -->
+      </div>
+
+      <script type="text/javascript+protovis">
+        $(yearSliderDefault).slider({
+          min: borough_stats2.minYear,
+          max: borough_stats2.maxYear,
+          value: borough_stats2.maxYear,
+          slide: function(e, ui) {
+            year = ui.value;
+            updateYear();
+            vis.render();
+
+          }
+        });
+
+        var year = 2008;
+
+        borough_lowres2.forEach(function(c) {
+          c.center = centroid(c.borders[0]);
+          //console.log(c.code, c.center);
+        });
+
+        var i = 0,
+          w = 900,
+          h = 500,
+          mapMargin = 30,
+          mapMargin_ = 200;
+
+        var longitude = -64; //-64
+        var latitude = -24; //-24
+        var scale = pv.Geo.scale()
+          // .domain({lng: -32, lat: -32 }, {lng: 335, lat:335 }) //old centroid
+          .domain({
+            lng: 10,
+            lat: 0
+          }, {
+            lng: 250,
+            lat: -200
+          }) //richmon missing, got to increase
+          //FIXING CITY AND RICHMOND
+          .range({
+            x: mapMargin_,
+            y: -20
+          }, {
+            x: w - mapMargin_,
+            y: h - 0
+          });
+
+        var legendMargin = 20,
+          ease = null,
+          //change text width bellow the sliding bar
+          yearsMargin = 40, //same values as in D3Styles.css
+          yearsMargin_ = 180;
+
+        var yearsScale = pv.Scale.linear()
+          .domain(borough_stats2.minYear, borough_stats2.maxYear)
+          .range(yearsMargin_ + 2, w - yearsMargin);
+
+        var legendScale = pv.Scale.linear()
+          .domain(14, 35)
+          .range(legendMargin, w - legendMargin);
+
+          // city 63620 and newham 28780
+
+        var col = function(v) {
+          if (v < 28781) return "#008038";
+          if (v < 35749) return "#A3D396";
+          if (v < 42717) return "#FDD2AA";
+          if (v < 49685) return "#F7976B";
+          if (v < 56659) return "#F26123";
+          if (v < 63621) return "#E12816";
+          /* else */
+          return "#B7161E";
+        };
+
+        var numToRad = function(n) {
+          return Math.sqrt(n) / 35; //change rad
+        };
+
+        var nodes = [],
+          codeToNode = [],
+          links = [];
+
+        //   console.log(borough_stats2['City']);
+
+        borough_lowres2.forEach(function(s) {
+         if (borough_stats2[s.code]) { //s.code
+            //borough_stats2[s.code]
+            var x = scale(s.center).x,
+              y = scale(s.center).y,
+            //  numObese = borough_stats2[s.code].pop[borough_stats2.yearIdx(year)] * borough_stats2[s.code].obese[borough_stats2.yearIdx(year)] / 100,
+            numObese= borough_stats2[s.code].all[borough_stats2.yearIdx(year)],
+
+              n = {
+                x: x,
+                y: y,
+                p: {
+                  x: x,
+                  y: y
+                },
+                r: numToRad(numObese),
+                code: s.code
+              };
+              console.log(numObese);
+            nodes.push(n);
+            codeToNode[s.code] = n;
+            // console.log(s.code,n);
+          }
+          // console.log(s.code,x,y)
+        });
+
+        borough_lowres2.forEach(function(s) {
+          if (borough_stats2[s.code]) {
+            var borders = borough_borders2[s.code];
+            borders.forEach(function(b) {
+              if (codeToNode[s.code] && codeToNode[b] && s.code < b) {
+                var nodeA = codeToNode[s.code];
+                var nodeB = codeToNode[b];
+                links.push({
+                  sourceNode: nodeA,
+                  targetNode: nodeB,
+                  length: (nodeA.r + nodeB.r + 2)
+                });
+              }
+            });
+          }
+        });
+
+        function updateYear() {
+          nodes.forEach(function(n) n.r = numToRad(borough_stats2[n.code].all[borough_stats2.yearIdx(year)]*22000 ));
+          links.forEach(function(l) l.length = (l.sourceNode.r + l.targetNode.r + 2));
+          i = 0;
+          var stepSome = setInterval(function() {
+            if (i++ > 10) clearInterval(stepSome);
+            sim.step();
+            vis.render();
+          }, 20);
+        }
+
+        updateYear();
+        var timer = undefined;
+
+        // function playClick() {
+        //   if (timer) {
+        //     stop();
+        //   } else {
+        //     if (year == borough_stats2.maxYear) year = borough_stats2.minYear;
+        //     $(yearSliderDefault).slider('value', year);
+        //     $(play).attr("src", 'stop.png');
+        //     updateYear();
+        //     vis.render();
+        //     timer = setInterval(function() {
+        //       year++;
+        //       if (year >= borough_stats2.maxYear) stop();
+        //       $(yearSliderDefault).slider('value', year);
+        //       updateYear();
+        //       vis.render();
+        //     }, 400);
+        //   }
+        // }
+        //
+        // // Stop the animation
+        // function stop() {
+        //   clearInterval(timer);
+        //   timer = undefined;
+        //   $(play).attr("src", 'play.png');
+        // }
+        var cats = ["Income", "Life Expectancy", "Green Spaces", "Active Kids",	"Drugs"];
+        //check this collission constraint for possible solution
+        var collisionConstraint = pv.Constraint.collision(function(d) d.r + 1),
+          positionConstraint = pv.Constraint.position(function(d) d.p),
+          linkConstraint = pv.Force.spring(100).links(links);
+
+        var sim = pv.simulation(nodes)
+          .constraint(collisionConstraint)
+          .constraint(positionConstraint)
+          .constraint(linkConstraint)
+          .force(pv.Force.drag());
+
+        var vis = new pv.Panel()
+          .width(w)
+          .height(h)
+          .top(50)
+          .bottom(30);
+
+        // Add the ticks and labels for the year slider
+        vis.add(pv.Rule)
+          .data(pv.range(borough_stats2.minYear, borough_stats2.maxYear + .1))
+          .left(yearsScale)
+          .height(4)
+          .top(-50)
+          .anchor("bottom").add(pv.Label)
+            .text(function(d) cats[cats.length-this.index-1]);
+
+        vis.add(pv.Dot)
+          .data(nodes)
+          .left(function(d) d.x)
+          .top(function(d) d.y)
+          .radius(function(d) d.r)
+          .fillStyle(function(d) col(borough_stats2[d.code].income))
+          .strokeStyle(null)
+          .title(function(d) borough_stats2[d.code].name + "\nIncome: £" +borough_stats2[d.code].income+
+          "\nLife Exp. at 65: "+borough_stats2[d.code].life+
+          "\nGreen Spaces: "+borough_stats2[d.code].green+
+          "\nActive Kids: "+borough_stats2[d.code].kids+
+          "\nDrug Contact: "+borough_stats2[d.code].drugs)// + borough_stats2[d.code].obese[borough_stats2.yearIdx(year)] + "%"
+          .add(pv.Label)
+          .text(function(d) d.code)
+        //  .textStyle("#fee")
+          .font(function(d)
+           + (2.9 * Math.log(d.r)).toFixed(0) + "px sans-serif")
+          .textAlign("center")
+          .textBaseline("middle");
+
+
+
+
+         vis.add(pv.Bar)//range MIN MAX STEP as denominator
+          .data(pv.range(28000, 63000, 6160))
+          .bottom(function(d) this.index * 15 - 28)
+          .height(12)
+          .width(12)
+          .left(5)
+          .fillStyle(function(d) col(28000+this.index*6000))
+          .lineWidth(null)
+          .anchor("right").add(pv.Label)
+          .textAlign("left")
+          .text(function(d) "> £"+d);
+
+
+          // var trick=0;
+          // var treat=0;
+          // function scaleViz(){
+          //   trick=1;
+          //
+          //   vis.add(pv.Dot)
+          //       .data([
+          //           {v: 10000000, l: "10M"},
+          //           {v: 1000000, l: "1M"},
+          //           {v: 5000000, l: "5M"},
+          //           {v: 100000, l: "100K"}
+          //         ])
+          //       .fillStyle(null)
+          //       .strokeStyle("#000000")
+          //       .left(150)
+          //       .bottom(-30)
+          //       .radius(function(d) numToRad(d.v))
+          //     .anchor("top").add(pv.Label)
+          //       .text(function(d) d.l)
+          // }
+          //
+          // function deScaleViz(){
+          //
+          // treat=1;
+          //   vis.add(pv.Dot)
+          //       .data([
+          //           {v: 10000000, l: "10M"},
+          //           {v: 1000000, l: "1M"},
+          //           {v: 5000000, l: "5M"},
+          //           {v: 100000, l: "100K"}
+          //         ])
+          //       .fillStyle(null)
+          //       .strokeStyle("#e0e0e0")
+          //       .left(150)
+          //       .bottom(-30)
+          //       .radius(function(d) numToRad(d.v))
+          //     .anchor("top").add(pv.Label)
+          //       .text(function(d) d.l)
+          // }
+
+
+
+        ease = setInterval(function() {
+          if (i++ > 840) {
+            clearInterval(ease);
+            ease = null;
+          }
+
+            // if(year==2006){
+            //   trick++;
+            //   if(trick<2){
+            //     scaleViz();
+            //     treat=0;}
+            //   }
+            // else{
+            //   treat++;
+            //   if(treat<2){
+            //       deScaleViz();
+            //       trick=0;}
+            // }
+            //
+
+
+          sim.step();
+          positionConstraint.alpha(Math.pow(.7, i + 2) + .08);
+          linkConstraint.damping(Math.pow(.7, i + 2) + .3);
+          vis.render();
+        }, 40);
+
+
+
+
+      </script>
+    </div>
+  </div>
+
+  <div style="border: 0px solid blue; margin-left: 60%; margin-right: 5%">
+    <h1>Reimagining visualising income</h1>
+    <h3>A Dorling Cartogram</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <h3>Comparing Income Against Other Data</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+
+
+
+  <div id="canvas123">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.js"></script>
+    <script src="threeVisualisation.js"></script>
+  </div>
 
 
   <div class="w3-container" style="padding:128px 16px" id="statanalysis">
