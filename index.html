@@ -137,6 +137,9 @@ font-weight: "bold";
   background-color:pink;
 }
 
+.barim {
+  padding:16px;
+}
 
 
 h3 {
@@ -594,6 +597,17 @@ In conclusion, the current literature highlights that knowing what associates wi
 <p class="text">This visualisation allowed to compare several variables at once, as well as to see the extremities in the data sets rather easily, however lacked clarity, as boroughs would overlap and hinder visibility. In general, the rather complicated shapes of different boroughs proved to be one of the major issues in this approach and called for a better solution to be found. The demo can be seen at the <a href="#gift">bottom of the page</a>.
 </p>
 <p class="w3-center"><img src="https://lh5.googleusercontent.com/hUk-33Y6g5N3wfgFk0j2OYWjJZWvyJlsAomvcSqdkdLx93xbNWPkVMk5djUp2TA2756iRWJw7jUhBLo8jynVPf83yZ9IiLu0LhDbUuk4hJoUtMOzenn16BldizzrSDKBgtVcY-x5"></p>
+<p class="text_again">Approach 2 - Dorling Cartogram</p>
+<p class="text">After having experimented in 3D, we decided to look at alternative visualisation methods, one of which happened to be a Dorling cartogram. This proved to be a great solution, as it was capable of displaying two sets of variables at once in visually clear manner and proved to be very exciting to interact with. The following cartogram visualisation was created using a JavaScript library called D3.js.</p>
+<p class="w3-center"><img src="https://lh4.googleusercontent.com/Vl7vBns4LfrLBWVJmfX50SEllRSe8QlaoFJG8U3uyLhyyV5Uv2eYfhbLjAMB2Qp-qJVFkz1OSyVB5oBtpYiavj6IzGgbvl2K8rrLsX_taIJ8VJZMToNU16qEAeTRrM4yy0A0Vz-O"></p>
+ <p class="text">A Dorling Cartogram, being a force directed graph, enabled us to maintain geographic accuracy for easier visual clarity, which proved very important, as it helps contrast rich areas with poor ones.
+<br>In this particular visualisation, the income data is always visualised by colour across all 5 categories and the second dataset is portrayed by the changing radii of circles. The datasets were mapped in a linear manner and, again , set within a diameter limit for minimum and maximum.
+<br>Given the nature of D3.js, we are also able to interact with the visualization by hovering our mouse over it and seeing all of the values for a specific borough.
+</p><p class="text"><i>Limitations 2</i></p>
+<p class="text">However, one of the main issues is the lack of scale for radii (colours is accounted for in the bottom left corner). Given the nature of our used datasets, all of them had different units and there were limitations of implementing a dynamic scale to account for all the data. However, the data units are accounted for by the fact that we can inspect each borough by hovering our mouse on it and seeing the borough-specific values.
+</p>
+</div></div>
+
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="website">
 
 <h3 class="w3-center">Website</h3>
@@ -609,16 +623,34 @@ In conclusion, the current literature highlights that knowing what associates wi
 <p class="w3-center w3-large">Visualising the data</p>
 
     <div class="w3-row-padding" style="margin-top:32px">
-    <p>b a r charts hello everyone i love u
+    <p class="w3-center"><img src="https://lh4.googleusercontent.com/SNn_CI91ZwVZ0VxJlVBuAcQ8TTqU29EuINAvySc1HV4q_J0aRXoKSexw5UGomAhVw0Mx2PboCm3Uvm0PzVaILIkWkrvZzKYXjnaj7k7pbhH-YxA15f1r3RJqrbSyrHI7Jae9ntvJ" height="475" width="auto" style="padding:25px">
+      <img src="https://lh6.googleusercontent.com/YMXdp83b0PO4aOEkQVP9dji_bI-AJodDsm-YLvGpeGK1NhZdceQxnX3tHliMhj8Szj_BqBQ6gCBdEWY8ZvRjtl2cieoZoc9aU5nijavmVQd7AM6_RxVEcDmz135IdsBb3vraQhFq" height="475" width="auto" style="padding:25px">
+      <img src="https://lh6.googleusercontent.com/KbBjMw7BkQuwt-MziJeQq6si-8BpMW_njOGVkZw1b0J-elNbytCmCKcfR3htYkYB1tdO3PUjYRR9UKovBV2Gjk2_F6taxB8iHjeQ7mePQa6JoN1Oy7yO3VlUCsoDBY7XahA1i8ed" height="475" width="auto" style="padding:25px">
+      <img src="https://lh3.googleusercontent.com/Z--Q9TAtiyq1jJMouoQUYJJko057PNy39u9iWE6FKFe96Xgtm1jEKCEVjaapvUOdz2GoH0YT8pX8fIx0vbwpu_XcaBIVHBPyyPkCHnTiaAgkV5mf3iizU9tIeKseNLFkzOAFvcCE" height="475" width="auto" style="padding:25px">
+<img src="https://lh3.googleusercontent.com/fuwMlnS2c2sosZ66ti4qeZXlIWimR0Y7oEZ4vgXpUKQUAk0H57J_i0qwljzYwgMphhE1bCjY9qrici0Q3eZPtPZEOKpf816nMlKT1115Nl23qaZ4zpambDiiuD-Wdfmfj0onN0my" height="475" width="auto" style="padding:25px">
 </p>
 
 </div></div>
 
-<div class="w3-container w3-grey" style="padding:128px 16px" id="scatter">
+<div class="w3-container w3-sand" style="padding:128px 16px" id="scatter">
 
 <h3 class="w3-center">Scatter Plots</h3>
     <div class="w3-row-padding" style="margin-top:32px">
-    <p>yassss SCATAAAAAAAAAAAA
+    <p class="w3-center">
+      <img src="https://lh6.googleusercontent.com/MSRIPQ-FpzQxM6nHm5htu_WJtwkCS4kPie3ukHsese_NqE06hk-KE5imb9mypvXWIlLCfqirL6Rma-8rRLbz4EklGu6JgIdaHy5iImQ2rluxSXTaLsV5Jpp7ihAOQsBVQDAo4imt">
+<img src="https://lh4.googleusercontent.com/irmJ6GgNdr5_SHeJZlDn9fppyVlNuCDIEu1yF-Lq33igwL57BnNmzm9OG_cUs_GuNqUhRqO1uBGoalsIzAOWeTRoCikW6o7pNwo7tbNRMFqlU7E_dTem1CTNkLcjWdWks-JrArni">
+</p>
+<p class="w3-center"><img src= "https://lh5.googleusercontent.com/ohMhJkPCSpY6TliLRebtqWx9QSDBbEEWYp-7s5gNVcUXq0chRrb68g_L50RCYtj6PhXc2iEFNak9D4G8YEML8uYlwfJ-g0FYUnr6y9ILLTz2G57yUCu4iVyq96nAW4CO6CXqS2mj">
+  <img src="https://lh6.googleusercontent.com/SwPnjpUd-e5ZJiXXQst6n6ny2M2YCXhWoqLpDiGiIgt5WhG3zCjDLxSbmieyCaCoo04ihfB6qf0nPxBrlJDZbHJIQtPnVGLCTCsqglv7cXb1q648LWE6mwGgVNWaGmktMvSj4kbZ">
+</p>
+<p class="w3-center"><img src="https://lh5.googleusercontent.com/IzXPk3RlnNHj3JYHv0B5H4zyMg1ieI1VAJLKdRds3Sr0p45IejXT5JD2pDJ0zFRo6F417ryfqG2gLiDXys_StfoQCjyPxLxBeOErgQIBMJSiHkfT_Bb-cm-PJVu3Eso9tahMN-EI">
+  <img src="https://lh5.googleusercontent.com/qHpO6LS-VExVw57tt_myfOxoCKxOh3IqB0jfx1GZihXLloDy8KkDMurqn1Ujx9miLvtb9-iQevnV3Qf0PprWkXXXISrheSdQ7FRbe_2OANYKjky4KWJb1CBStDDEprAvmC1M_YAW">
+</p>
+<p class="w3-center"><img src="https://lh5.googleusercontent.com/mdaSHxHjtdU-zXOSKZQV8fQniAhnFMD_0TlKFWiZ6O6B71CJQZslL9e9one4jNadvBrsbjc5fx6ooa-mNde3QJZ-cyt7qmLofkdftSZjeaupz_7D2xr9RJqzBw7srJ8LOG-LhNLq">
+  <img src="https://lh6.googleusercontent.com/H7QeqX0KK5Stk99JoMXQq9-prmbetzy8v2PZ3VcCoi2E-7ncC9dMrHxAexJWUDGE8hVU7DIn_oPRjS83qc8Yg7dkv9lEhq2TDzJLWtN3VP42J6pfRnSzaUaDiT7iIaNJmZ59mK5a">
+</p>
+<p class="text">These scatterplots allow us to see the relationship between income per borough and the other 4 variables that we looked at in a better and clearer way. We added a line of best fit so that we can better see if the relationship tends to be positive - so if one variable increases the other increases as well - or negative - if one increases the other decreases.
+<br>We did this for both ranked and nonranked values (for more explanation on this go to the <a href="#limits">“Methods”</a> section). Through it we can see that there seems to be some relationship between some of the variables, for example, income and active kids. However, we can’t tell how strong the relationship is. For this we need statistical methods that allow us to evaluate the strength of a relationship. We did this by calculating the Pearson and Spearman correlation values for each relation - check the <a href="#statanalysis">statistical analysis</a> section.
 </p>
 
 </div></div>
