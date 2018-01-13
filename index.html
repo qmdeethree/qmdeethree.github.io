@@ -306,7 +306,7 @@ body, html {
     <span class="w3-jumbo w3-hide-small">Disease, Dollar, Data</span><br>
 
     <span class="w3-large"><b>Down and out in London: an analysis by Daisy, India, José, Thomas and Justas</b></span>
-    <p><a href="#about" style=" border: 5px red solid;" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Explore our story</a></p>
+    <p><a href="#abstract" style=" border: 5px red solid;" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Explore our story</a></p>
   </div>
 
 </header>
@@ -366,7 +366,8 @@ body, html {
         <div class="w3-container">
           <h3>Thomas </h3>
           <p class="w3-opacity">Web Designer</p>
-          <p>A beautiful, and our favourite, Eurasian bird of Paradise</p>
+          <p>A beautiful, and our favourite, Eurasian bird of Paradise uclqcdu@ucl.ac.uk
+</p>
         </div>
       </div>
     </div>
@@ -530,7 +531,7 @@ In conclusion, the current literature highlights that knowing what associates wi
     <div class="w3-row-padding" style="margin-top:32px">
     <p class="w3-large text_again"><b>Methods and steps of analysis:</b></p>
 <p class="text">We had 4 different variables - drug use, life expectancy, green spaces and active kids -, each of which we wanted to compare with average income in a London borough. We wanted to see if there was a correlation between the wealth of the borough – as estimated by the average income – and the variable (for example: if average income correlated with life expectancy).
-<p class="text">We used Azure notebooks and the Python pandas package to clean the data. Click on the image below to see exactly how we did it:</p>
+<p class="text">We used Azure notebooks and the Python pandas package to clean the data. Click on the image below to see exactly how we did it (and then click "greenspaces.ipynb"):</p>
 
 <p class="w3-center"> <a href="https://secondtryqm-indiaabbott.notebooks.azure.com/nb/notebooks/greenspaces.ipynb"><img src="https://avatars3.githubusercontent.com/u/7388996?s=400&v=4" style="border:solid; border-color:light-grey;" height="400" width="auto"></a>
 </p>
@@ -545,7 +546,7 @@ In conclusion, the current literature highlights that knowing what associates wi
 <p class="text">The covariance is the unstandardized measurement for the linear relationship between two variables. The standard deviation is used to standardise this measurement to produce a value between 1 and -1 for linear relationships.
 <br>The Spearman Correlation shows how well the relationship between the variables can be described using a monotonic function. A monotonic function is a function that is either entirely non-increasing or entirely non-decreasing, for example:
 </p>
-<p class="w3-center"><img src="https://lh3.googleusercontent.com/WQEW2E8MFscrJBK9-5tYdPedl8I1ndvPOCFwrqZF6oWqQjHwhViwdoaVEG9seMAN3BJ6HBUhfe_MLFNN3PkILX7t84jmOts4f2eG2IepAj9iZTX5s747iKD1eWh2f0iw_S2Ag9tK"></p>
+<p class="w3-center"><img src="https://lh3.googleusercontent.com/WQEW2E8MFscrJBK9-5tYdPedl8I1ndvPOCFwrqZF6oWqQjHwhViwdoaVEG9seMAN3BJ6HBUhfe_MLFNN3PkILX7t84jmOts4f2eG2IepAj9iZTX5s747iKD1eWh2f0iw_S2Ag9tK" style="border:solid"></p>
 <p class="text">In Figure 1, the graph of the relationship between X and Y never has a negative gradient.
 <br>The Spearman Correlation Coefficient can show us if there is a strong relationship between the variables, even if that relationship is non-linear. For a strong positive correlation between variables, even if the correlation is not consistent, the Spearman Correlation Coefficient will give a value close to 1.
 <br>The Spearman Correlation Coefficient is calculated in the same way as the Pearson, however the values are ranked using Spearman’s rank first. In our investigation this just meant each borough was given a number 1 to 33 (as there are 32 London boroughs plus the City of London), for income and for each variable, (e.g. Life Expectancy) and then the Correlation Coefficient was calculated from these rankings.
@@ -557,7 +558,7 @@ In conclusion, the current literature highlights that knowing what associates wi
 <br>Furthermore, the Pearson Correlation Coefficient is particularly sensitive to outliers (“Pearson Product-Moment Correlation - Guidelines to interpretation of the coefficient, detecting outliers and the type of variables needed.,” n.d.). The Spearman Coefficient is also more robust in this respect, however we will still consider this sensitivity when interpreting our results, and if appropriate, remove extreme outliers from the dataset.
 <br>The Spearman, like the Pearson Correlation Coefficient does not account for any relationship that is non-monotonic, for example, the relationship shown in Figure 2, would produce a Spearman and Pearson coefficient equal to 0.
 </p>
-<p class="w3-center"><img src="https://lh4.googleusercontent.com/w0B7WkWQ_fDj3oTEUpvMNM0pFwCooIsxXnlg5zFIqckOZCEtysS-36sfX-DlECLukMuL6Px9fcWaX1R9aHg-e46RI8U7P3m_3ySMneUdz6Z8j7k0-silHLHICSFhhi2GXCubhJF9"></p>
+<p class="w3-center"><img src="https://lh4.googleusercontent.com/w0B7WkWQ_fDj3oTEUpvMNM0pFwCooIsxXnlg5zFIqckOZCEtysS-36sfX-DlECLukMuL6Px9fcWaX1R9aHg-e46RI8U7P3m_3ySMneUdz6Z8j7k0-silHLHICSFhhi2GXCubhJF9" style="border:solid"></p>
 <p class="text">The Spearman coefficient is more robust to extreme outliers than the Pearson coefficient because it limits the value of the outlier to its rank. However, it can’t tell us whether the relationship between the variables is linear or otherwise. Furthermore, the ranking washes out some of the correlation, as we can no longer tell how much Y increased as a result of X. We can interpret the Spearman Correlation Coefficient to be how sure we are that there is a correlation, and the Pearson Correlation Coefficient to represent how linear the relationship is.
 <br>We will address these limitations by using both methods on our data and comparing the results between them
 </p>
@@ -567,13 +568,32 @@ In conclusion, the current literature highlights that knowing what associates wi
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="limits">
 
 <h3 class="w3-center">Visualisations</h3>
+<p class="w3-center w3-large">How did we create the visualisations we use? <br>(click <a href="#datavis">here</a> to see the results of these methods)</p>
+
     <div class="w3-row-padding" style="margin-top:32px">
+      <p class="w3-large text_again">Bar Charts</p>
+
     <p class="text">We created bar charts for each variable, which allowed us to check that our values were working etc. (for example, the bar chart wouldn’t work until there were no N/A values, and all the values were stored as integers or floats.)
 
 </p>
-
-</div></div>
-
+<p class="w3-center"> <img src="https://lh4.googleusercontent.com/-yWJATA-tavP7-IUevhoo2AG-yo_ASay828x4Bbr8sFcJnp8lJzMdfPSy_2Coup4uwDUjkCKlVfKNrl3GpOo3Sw1UyVjV2pD2SAZlL247A2zc0iuUrl75xMmZXcW9hi50HpGXjKa" style="border:solid"></p>
+<p class="w3-large text_again">Scatter Plots</p>
+<p class="text">We created scatter plots for each variable vs. income, for example:</p>
+<p class="w3-center"><img src="https://lh4.googleusercontent.com/jE7XJW7oNuasOrI2BZGUz6mFtNsv-4v_h_gIPrFEAuYjWW1WCP-PrlA0n-XQmN5ej-Onbok47LKBEomtAfTixrbZYtqqlifTdzY7JGlYlaU2aU1Zy7Rx4-kKzdjT_or_gjQwxTs-" style="border:solid"></p>
+<p class="text">We also made ranked scatter plots. For this we first ranked the data - we ranked the London Boroughs in terms of income and in terms of the variable, so that we could plot them against each other for a scatter plot and regression line, for example:
+</p>
+<p class="w3-center"><img src="https://lh4.googleusercontent.com/_zUO2KYSkli0Ww7esZkgVPOxKqPvBkNp11frYeD1oNmKMceaMe7Pkz9Q7V5s8SQ4C8ei17IKvzQkkYVXJa12BOz_i_Xv4XNj4yriVTZgPP5DnPiJR9c_v-BOmZh2o8DjNaaN9OmU" style="border:solid"></p>
+<p class="text">The advantage of this was that if there was a non-linear relationship between the variables, we would still see a correlation in the ranked scatter plot. Whereas we might not in the original scatter plot - although this doesn’t apply to the example above where you can see a linear correlation in the original scatter plot.
+</p>
+<p class="w3-large text_again">Maps</p>
+<p class="text">Given the comparative nature of our project, we knew that typical visualization methods would not suffice. By contrasting multiple datasets, such as drugs use or life expectancy, against the income data, we were trying to research any visual correlations between the two. However, having to portray and compare variables from two different sets of data at once meant that typical choropleth maps were not a valid solution, since they only use color intensity to display one set of data. </p>
+<p class="text_again">Approach 1 – 3D Choropleth Map<p>
+<p class="text">Naturally, the first solution was to improve on choropleth maps by trying to visualize the additional set of data by extruding the geographical shape of the borough upwards. The datasets were then mapped in a linear manner and set within a height limit.  The visualization was executed using a JavaScript library called Three.js, running the extruded 3D map in the browser and letting the user interact with the map by turning it around. In the example below, the color and height represent income, to better clarify how the visualization works, both dark red and the biggest height indicate a maximum in the used dataset.</p>
+<p class="w3-center"><img src="https://lh6.googleusercontent.com/la62sC6SNIv5AO67jj5YQvYuHYRlDWMc01qc8XoHlo8eKDYhALs6m9sLv6_g-_STwdEHOVu5BGOuSwCU3BXXDwfOB6nDB1hYk07m5-rVysV6HNZjFqP651UEuA8WI27cF8ohAyLt"></p>
+<p class="text"><i>Limitations 1</i></p>
+<p class="text">This visualisation allowed to compare several variables at once, as well as to see the extremities in the data sets rather easily, however lacked clarity, as boroughs would overlap and hinder visibility. In general, the rather complicated shapes of different boroughs proved to be one of the major issues in this approach and called for a better solution to be found. The demo can be seen at the <a href="#gift">bottom of the page</a>.
+</p>
+<p class="w3-center"><img src="https://lh5.googleusercontent.com/hUk-33Y6g5N3wfgFk0j2OYWjJZWvyJlsAomvcSqdkdLx93xbNWPkVMk5djUp2TA2756iRWJw7jUhBLo8jynVPf83yZ9IiLu0LhDbUuk4hJoUtMOzenn16BldizzrSDKBgtVcY-x5"></p>
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="website">
 
 <h3 class="w3-center">Website</h3>
