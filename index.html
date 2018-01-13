@@ -133,6 +133,10 @@ font-family: "Raleway";
 font-weight: "bold";
 }
 
+.newcolor {
+  background-color:pink;
+}
+
 
 
 h3 {
@@ -159,12 +163,24 @@ body, html {
 }
 
 .text {
-  margin-left:300px;
-  margin-right:300px;
+  margin-left:350px;
+  margin-right:350px;
 }
 
 .ahhtext {
-  margin-right:100px;
+  margin-right:150px;
+}
+
+.fourtext {
+  margin-left:250px;
+  margin-right:250px;
+
+}
+
+.text_again {
+  margin-left:350px;
+  margin-right:350px;
+  text-decoration:underline;
 }
     #canvas123 {
       background-color: #000;
@@ -211,6 +227,8 @@ body, html {
     <div class="w3-dropdown-hover">
 <a href="#about"><button class="w3-button w3-white">INTRO</button></a>
     <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      <a href="#abstract" class="w3-bar-item w3-button">Abstract</a>
+
     <a href="#team" class="w3-bar-item w3-button">Meet the Team</a>
     <a href="#about" class="w3-bar-item w3-button">Vision and Motivation</a>
     <a href="#aboot" class="w3-bar-item w3-button">Aims and Hypotheses</a>
@@ -290,15 +308,19 @@ body, html {
     <span class="w3-large"><b>Down and out in London: an analysis by Daisy, India, José, Thomas and Justas</b></span>
     <p><a href="#about" style=" border: 5px red solid;" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Explore our story</a></p>
   </div>
-  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
+
 </header>
+
+<div class="w3-container" style="padding:128px 16px" id="abstract">
+
+<h3 class="w3-center">Abstract</h3>
+    <div class="w3-row-padding" style="margin-top:32px">
+<div class="text">
+ <p>Hello! Welcome to our site. We are a team of students of University College London that took the module BASC2002: Quantitative Methods: Data Science and Visualisation. Our research aimed at exploring what factors were associated with poverty in London, as measured by income. We specifically looked at green spaces, physical activity of kids in schools, drug use and life expectancy. We found that green spaces was weakly negatively associated with income per borough; that life expectancy was moderately to strongly positively associated with income per borough; that there is no clear association between drug use and income per borough; and that physical activity was weakly positively associated with income per borough. These results provide evidence that supports some literature on its claim that policies that aim to alleviate low income individuals must be built at local levels. More so, this research informs policy makers on how best to tailor policies to improve the lives of low income individuals in London.
+
+ </div>
+ </div>
+ </div>
 
 <!-- Team Section -->
 <div id="team"class="w3-container w3-light-grey" style="padding:100px 16px">
@@ -367,6 +389,7 @@ body, html {
   <h3 class="w3-center">Vision and Motivation</h3>
   <p class="w3-center w3-large">Exploring what living with poverty entails in a big city </p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="fourtext">
     <div class="w3-quarter">
       <i class="fa fa-book w3-margin-bottom w3-jumbo w3-center"></i>
       <p class="w3-large">Literature</p>
@@ -376,7 +399,7 @@ body, html {
     <div class="w3-quarter">
       <i class="fa fa-calendar w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">However...</p>
-      <p>However, the factors that are correlated with poverty are not consistent over time and space. They differ due to the political systems, the welfare state and the general state of the economy in a given period in a given place.
+      <p>However, the factors that are correlated with poverty are not consistent over time and space. They differ due to the political systems, the welfare state and the general state of the economy in a given period in a given place - see the <a href="#litrev">literature review</a> for more on this.
 </p>
     </div>
     <div class="w3-quarter">
@@ -392,6 +415,7 @@ body, html {
 
 Our vision is to be able to provide the general public as well as policy makers with information that can benefit the way we approach poverty in London.
 </p>
+</div>
     </div>
   </div>
 </div>
@@ -409,13 +433,11 @@ This data is organised and measured by borough (Barking and Dagenham, Barnet, Be
 </p>
 
 <p1>We have various hypotheses. These are:
-<li>Higher levels poverty in a borough will correlate with lower levels of green spaces</li>
+<li>Higher levels poverty in a borough will correlate with less area of green space</li>
 <li>Higher levels of poverty in a borough will correlate with lower levels of physical activity of children attending school</li>
 <li>Higher levels of poverty in a borough will correlate with lower life expectancy</li>
 <li>Higher levels of poverty in a borough will correlate with higher levels of drug use</li></p1>
-<p>We assume that the factors investigated are representative of wider thematics. For example, we assume that area of green space is a valid indicator of environmental quality; physical activity of children in schools is a valid indicator of both physical activity and quality of education; life expectancy and drug use are valid indicators of health. While we acknowledge that none of the wider thematics can be reduced to these indicators alone, we believe the indicators chosen reveal relevant and important information concerning these areas.
 
-</p>
 
     </div>
   </div>
@@ -427,7 +449,7 @@ This data is organised and measured by borough (Barking and Dagenham, Barnet, Be
 
 
 <!-- Promo Section "Statistics" -->
-<div class="w3-container w3-grey" style="padding:128px 16px" id="litrev">
+<div class="w3-container w3-sand" style="padding:128px 16px" id="litrev">
 
 <h3 class="w3-center">Literature Review</h3>
   <p class="w3-center w3-large">How does poverty relate to other living factors (pollution, health, education) in London?</p>
@@ -456,38 +478,35 @@ In conclusion, the current literature highlights that knowing what associates wi
 <!-- Work Section -->
 <div class="w3-container" style="padding:128px 16px" id="data">
   <h3 class="w3-center">DATA</h3>
-  <p class="w3-center w3-large">Where did the data come from?</p>
+  <p class="w3-center w3-large">Basic information</p>
   <div class="text">
-<p class="w3-center"> All of our data came from the London Data Store (LDS), an official and local body for Greater London which consists of the Mayor of London, currently Sadiq Khan (Labour) and the London Assembly, all of whom are elected by the people.
+<p> All of our data came from the London Data Store (LDS), an official and local body for Greater London which consists of the Mayor of London, currently Sadiq Khan (Labour) and the London Assembly, all of whom are elected by the people. Most data is in the form of data tables in the CSV format, PDF files and Excel files, with data entries for each of the 32 London boroughs and the City of London. The individual datasets, while all provided by the London Data Store, were measured by different authorities:
+  <li>Physical activity of kids in schools or shortened to active kids which corresponds to the percentage of kids that have access to at least 2h of physical activity in schools in 2007/2008 comes from the Annual Survey of School Sport Partnerships on behalf of the Department for Children, Schools and Families by TNS Social Research: find the raw data <a class="newcolor" href="https://data.london.gov.uk/dataset/physically-active-children-borough">here</a>
+</li><li>Income which corresponds to the average income of taxpayers in each borough in 2014/2015 comes from the Greater London Authority: find the raw data <a class="newcolor" href="https://data.london.gov.uk/dataset/average-income-tax-payers-borough">here</a>
+</li><li>Green Space which corresponds to percentage land use for green spaces per borough in 2005 which comes from the Department for Communities and Local Government: find the raw data <a class="newcolor" href="https://data.london.gov.uk/dataset/land-use-ward">here</a>
+</li><li>Life Expectancy which corresponds to the mean life expectancy at age 65 in London boroughs in 2012/2013 which comes from the Office for National Statistics: find the raw data <a class="newcolor" href="https://data.london.gov.uk/dataset/life-expectancy-birth-and-age-65-ward">here</a>
+</li><li>Drug use which corresponds to the numbers of people in contact with drug action teams comes from the National Treatment Agency for Substance Misuse (now Public Health England) find the raw data
+	<a class="newcolor" href="https://data.london.gov.uk/dataset/drug-treatment-rates">here</a> </li>
+
 </p>
  <p class="w3-center w3-large">Is the London Data Store a reliable source?</p>
-<p class="w3-center">Being published by an official, reputable and accountable source gives the impression that the data is reliable. However, we remain aware that data collected under government parties (as it is currently) means there may be a political agenda underlying it. For example, Sadiq Khan is very outspoken about his wishes to clean London’s air and so may manipulate the data to make air quality seem worse than it actually is. However we feel this would be difficult to do, as the London Assembly are elected to examine decisions and actions taken by the Mayor, who they hold publicly and democratically accountable.<br>Furthermore, it is possible that some of the data, such as income data, are estimates or based on surveys. As such the appropriate caution was taken via team awareness of potential issues however we believe discrepancies in data wouldn't be too problematic and would also still paint an accurate picture of incomes per borough <b>relative</b> to each other</p>
- <p class="w3-center w3-large">Why did we choose the datasets we did and what do they represent?</p>
- <p class="w3-center">We decided to investigate 5 variables in our analysis, all of which  the literature review suggested as being related to poverty: income, green spaces, physical activity of kids in schools, drug use, life expectancy. All variables have values per borough of London. <br>Income data corresponds to...
+<p>Being published by an official, reputable and accountable source gives the impression that the data is reliable. However, we remain aware that data collected under government parties (as it is currently) means there may be a political agenda underlying it. For example, Sadiq Khan is very outspoken about his wishes to clean London’s air and so may manipulate the data to make air quality seem worse than it actually is. However we feel this would be difficult to do, as the London Assembly are elected to examine decisions and actions taken by the Mayor, who they hold publicly and democratically accountable.<br>Furthermore, it is possible that some of the data, such as income data, are estimates or based on surveys. As such the appropriate caution was taken via team awareness of potential issues however we believe discrepancies in data wouldn't be too problematic and would also still paint an accurate picture of incomes per borough <b>relative</b> to each other</p>
+ <p class="w3-center w3-large">Why did we choose these datasets?</p>
+ <p>We assume that the factors investigated are representative of wider thematics. For example, we assume that area of green space is a valid indicator of environmental quality; physical activity of children in schools is a valid indicator of both physical activity and quality of education; life expectancy and drug use are valid indicators of health. While we acknowledge that none of the wider thematics can be reduced to these indicators alone, we believe the indicators chosen reveal relevant and important information concerning these areas.
 
-<br>The life expectancy data corresponds to…
+ </p>
 
-<br>The physical activity of kids in schools data corresponds to the percentage of kids that have access to at least 2h of physical activity in schools.
-
-<br>Drug use data corresponds to..
-
-<br>Green spaces data corresponds to the percentage of land per Borough that is "Greenspace" - that is,  "an area of grass, trees, or other vegetation set apart for recreational or aesthetic purposes in an otherwise urban environment."
-
-<p class="w3-center"> Below you can find barcharts that represent the data we found. However, should you want to view the raw data yourself, please click the area of interest to be redirected: <a href="https://data.london.gov.uk/dataset/average-income-tax-payers-borough">income data </a> , <a href="https://data.london.gov.uk/dataset/land-use-ward">green space data, </a></p></div>
-<p class="w3-center">
-<img src="https://lh3.googleusercontent.com/-eWtHTdGhF3TcVkre8f1sjj8PwCZcJXUaQkVzOEiyZUAbD0dUnBr2NErbBcRjG_s16Wa0f-aQ-35xdmbYH-t2qQlBGXHA_NwgNCbXsJuZPc-GI8xuJoGsvmGAmNQqnOsb9q8vdP8" height="425" width="auto" alt="Image" style="margin-left: auto; margin-right:auto; display:inline-block;">
-<img src="https://lh3.googleusercontent.com/fMWGdOstIVNnRffrvdNIT_TAzysqkyOJE6UVbzYCBvv83I5buAaDpWshZg2LDvxbpjAvZeZyTHf8qYaCsM2YrbAkCxIamrPcdV2B_9Xu-dBP65RZ9f1u8d8Zls3q7CIjY6dVEWJd" height="425" width="auto" alt="Image" style="margin-left: auto; margin-right:auto; display:inline-block;"> </p>
-<div class="text">
-<p class="w3-center">As one can note, there is a lot of variation in the data. However, conclusions can only be reached with the use of statistical tests (described and explained in the next section).
-</p>
 
  <p class="w3-center w3-large">What problems were encountered regarding the data?</p>
-<p class="w3-center">The majority of our issues arised in the data cleaning process. Due to the internationalisation on some of our laptops, converting ExCel files to CSV was difficult and we lost some data during the conversion. To work around this however, we would copy-paste the data from ExCel into Google Sheets, and export it into a CSV from there. After that it could be easily uploaded and manipulated on Python via Azure Notebooks.
+<p>The majority of our issues arised in the data cleaning process. Due to the internationalisation on some of our laptops, converting ExCel files to CSV was difficult and we lost some data during the conversion. To work around this however, we would copy-paste the data from ExCel into Google Sheets, and export it into a CSV from there. After that it could be easily uploaded and manipulated on Python via Azure Notebooks.
 </p>
-<p class="w3-center">Due to the City of London's status as a "principal division" (rather than Borough) of London, its data was occasionally not included in our chosen datasets. This was the case with our "Active Kids" and "Life Expectancy" datasets. As such, we had to estimate what the missing values may have been; we considered this to be similiar or the same as the next richest Borough.</p>
+<p>Due to the City of London's status as a "principal division" (rather than Borough) of London, its data was occasionally not included in our chosen datasets. This was the case with our "Active Kids" and "Life Expectancy" datasets. As such, we had to estimate what the missing values may have been. For the former we looked at all the schools in the City of London and estimated this value. For the latter we did not estimate a value for the statistical analysis since we had no reliable way to search for this data. However, for the purposes of the colourmap visualisation, we took the average of all the other values to allow the visualisation to work.
+</p>
 
  <p class="w3-center w3-large">Ethical considerations</p>
- <p class="w3-center">Blablabla.</p>
+ <p>Anonymity is an ethical consideration present whenever working with big data. The nature of the data and data source means anonymity should not be an issue. Because the data is available for boroughs of large populations, anonymity is well secured – there are no populations that are small enough that could allow for cross-checking with other data sets. In data analysis it is important to be aware of the potential identification of the people who provide the data. However it also poses a problems in that such anonymity forces us to make assumptions in our data analysis – it would be impossible to prove causation, only correlation.
+<br>Furthermore, another consideration when utilising big data is that many of the safeguards and considerations in traditional social research are not present in the creation of big data, particularly with regards to privacy and informed consent. Privacy is recognised as a human right under numerous declarations and treaties. In the UK, the European Convention on Human Rights, which has statutes concerning privacy rights, has been implemented through the Human Rights Act 1998, with protection of personal data provided by the Data Protection Act 1998. However, authorities that collect big data are often able to skirt the protections imposed. This is especially of concern with the household income, physically active children, and drug treatment rate datasets, which concern the livelihoods of people and depend on recording information that could be considered sensitive and private by some.
+</p>
 
 </div>
 </div>
@@ -503,12 +522,17 @@ In conclusion, the current literature highlights that knowing what associates wi
 
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="methods">
 
-<h3 class="w3-center">Statistical Methods</h3>
+  <h3 class="w3-center">Methods</h3>
+  <p class="text">This section outlines the methods we used in our research. For the reasons why we used these methods please refer to the visualisation section in which we outline what we decided to do with the data, the conclusions we could take from each of the visusalitions and why these led us to develop our work as we did.
+</p>
+
+<h3 class="w3-center">Statistics</h3>
     <div class="w3-row-padding" style="margin-top:32px">
-    <p><b>What we used:</b>
-<br>We had 4 different variables that we wanted to compare to average income in a London borough. We wanted to see if there was a correlation between the wealth of the borough – as estimated by the average income – and the variable (for example: if average income correlated with life expectancy).
-<br>We used Azure Notebooks and the Python Pandas package to clean the data. For example:</p>
-<p class="w3-center"> <img src="https://lh3.googleusercontent.com/fps3RdeZahqCTqRi-5MejgScdyrhFfpIn-ujBJwi3aL-8XtXhJ2rJfAbcqI1aTxGy4685tFNR56wqXSEmmErTOv9SGuzOpioTRDFrVmGL0lMCnmOpFv2rla2qMEjPS8D1DECF3Rp" style="border:solid; border-color:light-grey;" height="400" width="auto">
+    <p class="text_again"><b>Methods and steps of analysis:</b></p>
+<p class="text">We had 4 different variables - drug use, life expectancy, green spaces and active kids -, each of which we wanted to compare with average income in a London borough. We wanted to see if there was a correlation between the wealthwealth of the borough – as estimated by the average income – and the variable (for example: if average income correlated with life expectancy).
+<p class="text">We used Azure notebooks and the Python pandas package to clean the data. Click on the image below to see exactly how we did it:</p>
+
+<p class="w3-center"> <a href="https://secondtryqm-indiaabbott.notebooks.azure.com/nb/notebooks/greenspaces.ipynb"><img src="https://avatars3.githubusercontent.com/u/7388996?s=400&v=4" style="border:solid; border-color:light-grey;" height="400" width="auto"></a>
 </p>
 <p>We made a bar chart for each variable so that we could see the data visually:</p>
 <p class="w3-center"> <img src="https://lh3.googleusercontent.com/woQ-Z5KgC_Ia26fQBqtEzJRjlr61YJzNsk72SlYHd_inilSzDWRD-UcpnCon-9B7cLPsahpx6jJNeISixD2fmJI7-sq6oFkfbKgHdT-X4pCx9N22cAxFD6gpIW-CjbAUzZUkXlnw" style="border:solid; border-color:light-grey;" height="400" width="auto"></p>
@@ -546,7 +570,7 @@ In conclusion, the current literature highlights that knowing what associates wi
 </p>
 </div></div>
 
-<div class="w3-container w3-grey" style="padding:128px 16px" id="limits">
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="limits">
 
 <h3 class="w3-center">Visualisations</h3>
     <div class="w3-row-padding" style="margin-top:32px">
@@ -559,7 +583,7 @@ In conclusion, the current literature highlights that knowing what associates wi
 
 <h3 class="w3-center">Website</h3>
     <div class="w3-row-padding" style="margin-top:32px">
-    <p>We chose Github as the platform on which to host our site as it is possible for everybody to contribute to it without needing a password/email combination - we simply had to join the repository for the site and download Github Desktop. The code was written using the text editor Atom, and changes were then pushed to the repository via Github Desktop, appearing on our site. We used the help of a w3.css stylesheet to build the site, adapting it to suit our needs (for example, by building a navigation bar and increasing the margins so that the text read more easily as initially it read from one end of the screen to the other, which is fairly irritating.) Github was also a suitable platform on which to host our visualisations.
+    <p>We chose Github as the platform on which to host our site as it is possible for everybody to contribute to it without needing a password/email combination - we simply had to join the repository for the site and download Github Desktop. The code was written using the text editor Atom, and changes were then pushed to the online repository via Github Desktop, appearing on our site. We used the help of a w3.css stylesheet to build the site, adapting it to suit our needs (for example, by building a navigation bar and increasing the margins so that the text read more easily as initially it read from one end of the screen to the other, which is fairly irritating.) Github was also a suitable platform on which to host our visualisations.
 </p>
 
 </div></div>
