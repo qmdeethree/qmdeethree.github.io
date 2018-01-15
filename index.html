@@ -580,7 +580,8 @@ In conclusion, the current literature highlights that knowing what associates wi
 <p class="w3-large text_again">Weak, Medium and Strong Correlations</p>
 
 
-<p class="text">We will be interpreting our Pearson and Spearman Correlation Coefficients based on the assignations for weak to strong correlations from the website statstutor. (Resources for 03. Teach Yourself Worksheets > Pearsons Correlation Coefficient from statstutor,” n.d.; Resources for 03. Teach Yourself Worksheets > Spearmans Correlation Coefficient from statstutor, n.d.)
+<p class="text">We will be interpreting our Pearson and Spearman Correlation Coefficients based on the assignations for weak to strong correlations from the website statstutor. (Resources for 03. Teach Yourself Worksheets > Pearsons Correlation Coefficient from statstutor,” n.d.; Resources for 03. Teach Yourself Worksheets > Spearmans Correlation Coefficient from statstutor, n.d.) According to this, a coefficient of 0 to 0.19 corresponds to a very weak association, a coefficient from 0.20 to 0.39 it corresponds to a weak association, a coefficient from 0.40 to 0.59 corresponds to a moderate association, a coefficient from 0.60 to 0.79 corresponds to a strong association and a coefficient from 0.80 to 1 corresponds to a very strong association. Positive values correspond to a positive association, negative values correspond to a negative association.
+
 </p>
 
 </div></div>
@@ -635,9 +636,9 @@ In conclusion, the current literature highlights that knowing what associates wi
 </div></div>
 
 <div class="w3-container w3-sand" style="padding:128px 16px" id="datavis">
+<h3 class="w3-center">Visualisation</h3>
 
 <h3 class="w3-center">Bar Charts</h3>
-<p class="w3-center w3-large">Visualising the data</p>
 
     <div class="w3-row-padding" style="margin-top:32px">
     <p class="w3-center"><img src="https://lh4.googleusercontent.com/SNn_CI91ZwVZ0VxJlVBuAcQ8TTqU29EuINAvySc1HV4q_J0aRXoKSexw5UGomAhVw0Mx2PboCm3Uvm0PzVaILIkWkrvZzKYXjnaj7k7pbhH-YxA15f1r3RJqrbSyrHI7Jae9ntvJ" height="475" width="auto" style="padding:25px">
@@ -873,7 +874,7 @@ In conclusion, the current literature highlights that knowing what associates wi
                 .strokeStyle(null)
                 .title(function(d) borough_stats2[d.code].name + "\nIncome: £" +borough_stats2[d.code].income+
                 "\nLife Expectancy at 65: "+borough_stats2[d.code].life+" years"+
-                "\nGreen Spaces: "+borough_stats2[d.code].green+" meters sq. / 1000 res."+
+                "\nGreen Spaces: "+borough_stats2[d.code].green+"%"+
                 "\nActive Kids: "+borough_stats2[d.code].kids+"%"+
                 "\nDrug Contact: "+borough_stats2[d.code].drugs+"%")// + borough_stats2[d.code].obese[borough_stats2.yearIdx(year)] + "%"
                 .add(pv.Label)
