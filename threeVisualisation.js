@@ -23,7 +23,8 @@ var controller = 0;
 
 var boolTopView;
 var boolNormalView;
-
+var ShowMinMax=false;
+ShowMinMax_(1);
 var boolDataSwitch;
 
 var windowHalfX = window.innerWidth / 2;
@@ -33,11 +34,21 @@ document.body.appendChild(container);
 
 var info = document.createElement('div');
 info.style.position = 'absolute';
-// info.style.top = '700%';
-// info.style.width = '100%';
+
 info.style.textAlign = 'center';
 info.innerHTML = null;
 container.appendChild(info);
+
+var buttonControls = document.createElement('div');
+
+
+
+buttonControls.innerHTML =
+  '<button style="z-index:50; position: absolute; margin-top:10%" id="button1" onClick=viewIn2D()>Top View</button>'+
+  '<button style="z-index:50; position: absolute; margin-top:13%" id="button2" onClick=viewIn3D()>3D View</button>'+
+  '<button style="z-index:50; position: absolute; margin-top:16%" id="button3" onClick=ShowMinMax_(0);>Extremities On</button>'+
+  '<button style="z-index:50; position: absolute; margin-top:19%" id="button4" onClick=ShowMinMax_(1);>Extremities Off</button>;'
+container.appendChild(buttonControls);
 
 
 var control, controls;
@@ -91,118 +102,6 @@ init();
 animate();
 //addControls();
 
-function addControls(controlObject) {
-    var gui = new dat.GUI();
-
-
-    gui.add(controlObject, 'cameraPosX', -5, 5);
-    gui.add(controlObject, 'cameraPosY', -5, 5);
-    gui.add(controlObject, 'cameraPosZ', -5, 5);
-
-    gui.add(controlObject, 'lookAtX', -.5, .5);
-    gui.add(controlObject, 'lookAtY', -.5, .5);
-    gui.add(controlObject, 'lookAtZ', -.5, .5);
-
-    var obj = {
-        reset: function() {
-            boolNormalView = true;
-            boolTopView = false;
-            var normalCamZ = -250;
-            var normalCamY = -200;
-            //	scene.children[1].rotation.z=Math.PI;
-            // var topCamZ=-350;
-            // var topCamY=0;
-            // 								while(camera.position.z!=normalCamZ&&camera.position.y!=normalCamY){
-            //
-            //
-            //
-            // 								if(camera.position.z<normalCamZ){
-            // 									camera.position.z+=1;}
-            //
-            // 									if(camera.position.y>normalCamY){
-            // 								camera.position.y-=1;
-            // 							}
-            // }
-            camera.position.x = 0;
-            camera.position.y = normalCamY;
-            camera.position.z = normalCamZ;
-            control.cameraPosX = 0;
-            control.cameraPosY = 0;
-            control.cameraPosZ = 0;
-
-            control.lookAtY = 0;
-            control.lookAtX = 0;
-            control.lookAtZ = 0;
-
-        }
-    };
-    gui.add(obj, 'reset');
-
-    var obj3 = {
-        topView: function() {
-            boolTopView = true;
-            boolNormalView = false;
-            var topCamZ = -350;
-            var topCamY = 0;
-            // var normalCamZ=-250;
-            // var normalCamY=-200;
-            // 	while(camera.position.z!=topCamZ&&camera.position.y!=topCamY){
-            //
-            // 		if(camera.position.y<topCamY){
-            //
-            // 		 camera.position.y+=1;
-            //
-            // 	 }
-            //
-            // 	if(camera.position.z>topCamZ){
-            //
-            // 	 camera.position.z-=1;
-            //  }}
-
-            camera.position.x = 0;
-            camera.position.y = 0;
-            camera.position.z = topCamZ;
-            control.cameraPosX = 0;
-            control.cameraPosY = 0;
-            control.cameraPosZ = 0;
-
-            control.lookAtY = 0;
-            control.lookAtX = 0;
-            control.lookAtZ = 0;
-
-        }
-    };
-
-    obj4 = {
-        ShowMinMax: true
-    };
-
-    obj5 = {
-        boolDataSwitch: true
-    };
-
-    // Checkbox field
-    gui.add(obj4, "ShowMinMax");
-
-    gui.add(obj5, "boolDataSwitch");
-
-
-
-    gui.add(obj3, 'topView');
-
-    var obj2 = {
-        PrintData: function() {
-            console.log("x position is " + camera.position.x);
-            console.log("y position is " + camera.position.y);
-            console.log("z position is " + camera.position.z);
-
-            console.log("camLookat x position is " + lookAtX);
-            console.log("camLookat y position is " + lookAtY);
-            console.log("camLookat z position is " + lookAtZ);
-        }
-    };
-    gui.add(obj2, 'PrintData');
-}
 
 function init() {
 
@@ -232,7 +131,7 @@ function init() {
     scene.add(group);
 
     var loader = new THREE.TextureLoader();
-    //var texture = loader.load( "textures/UV_Grid_Sm.jpg" );
+    //var texture = loader.load( "textu/UV_Grid_Sm.jpg" );
 
     // it's necessary to apply these settings in order to correctly display the texture on a shape geometry
 
@@ -295,7 +194,7 @@ function init() {
 
 
         //DO MATRIX TRANSFORMATION HERE
-        mesh.position.set(x, y, z + 75);
+        mesh.position.set(x, y, z+35);
         mesh.rotation.set(rx, ry, rz);
         mesh.scale.set(s, s, s);
         group.add(mesh);
@@ -1252,7 +1151,7 @@ function init() {
     addShape(LewishamShape, extrusionData[22], colorVal(22), posX, posY, 0, rotX, rotY, rotZ, 1, extrusionData[22].name);
     addShape(MertonShape, extrusionData[23], colorVal(23), posX, posY, 0, rotX, rotY, rotZ, 1, extrusionData[23].name);
     addShape(NewhamShape, extrusionData[24], colorVal(24), posX, posY, 0, rotX, rotY, rotZ, 1, extrusionData[24].name);
-    addShape(RedbridgeShape, extrusionData[25], colorVal(26), posX, posY, 0, rotX, rotY, rotZ, 1, extrusionData[26].name);
+    addShape(RedbridgeShape, extrusionData[25], colorVal(26), posX, posY, 0, rotX, rotY, rotZ, 1, extrusionData[25].name);
     addShape(RichmondUponThamesIShape, extrusionData[26], colorVal(26), posX, posY, 0, rotX, rotY, rotZ, 1, extrusionData[26].name);
     addShape(RichmondUponThamesIIShape, extrusionData[26], colorVal(26), posX, posY, 0, rotX, rotY, rotZ, 1, extrusionData[26].name);
     addShape(SouthwarkShape, extrusionData[27], colorVal(27), posX, posY, 0, rotX, rotY, rotZ, 1, extrusionData[27].name);
@@ -1285,7 +1184,7 @@ function init() {
 
 
 
-  //  window.addEventListener('resize', onWindowResize, false);
+    window.addEventListener('resize', onWindowResize, false);
 
 
 
@@ -1295,14 +1194,58 @@ function init() {
 
 } //init end
 
-// function onWindowResize() {
-//
-//     camera.aspect = window.innerWidth / window.innerHeight;
-//     camera.updateProjectionMatrix();
-//
-//     renderer.setSize(window.innerWidth, window.innerHeight);
-//
-// }
+function onWindowResize() {
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+}
+
+
+function viewIn3D() {
+    boolNormalView = true;
+    boolTopView = false;
+    var normalCamZ = -250;
+    var normalCamY = -200;
+
+    camera.position.x = 0;
+    camera.position.y = normalCamY;
+    camera.position.z = normalCamZ;
+    control.cameraPosX = 0;
+    control.cameraPosY = 0;
+    control.cameraPosZ = 0;
+
+    control.lookAtY = 0;
+    control.lookAtX = 0;
+    control.lookAtZ = 0;
+
+};
+function viewIn2D() {
+  console.log("mechanism works");
+    boolTopView = true;
+    boolNormalView = false;
+    var topCamZ = -350;
+    var topCamY = 0;
+
+    camera.position.x = 0;
+    camera.position.y = 0;
+    camera.position.z = topCamZ;
+    control.cameraPosX = 0;
+    control.cameraPosY = 0;
+    control.cameraPosZ = 0;
+
+    control.lookAtY = 0;
+    control.lookAtX = 0;
+    control.lookAtZ = 0;
+
+};
+  function ShowMinMax_(on){
+
+    if (on==1){    ShowMinMax=true;}
+  else ShowMinMax=false;};
+
 
 function onMouseMove(event) {
 
@@ -1399,139 +1342,139 @@ function checkVal(boroughVal) {
 // gui2.add(obj,'add');
 
 function selectData() {
-    FinIncomeData2013 = [{
-            value: 63620,
-            name: "City of London"
-        },
-        {
-            value: 29420,
-            name: "Barking and Dagenham"
-        },
-        {
-            value: 40530,
-            name: "Barnet"
-        },
-        {
-            value: 36990,
-            name: "Bexley"
-        },
-        {
-            value: 32140,
-            name: "Brent"
-        },
-        {
-            value: 43060,
-            name: "Bromley"
-        },
-        {
-            value: 43750,
-            name: "Camden"
-        },
-        {
-            value: 37000,
-            name: "Croydon"
-        },
-        {
-            value: 36070,
-            name: "Ealing"
-        },
-        {
-            value: 33110,
-            name: "Enfield"
-        },
-        {
-            value: 35350,
-            name: "Greenwich"
-        },
-        {
-            value: 35140,
-            name: "Hackney"
-        },
-        {
-            value: 43820,
-            name: "Hammersmith and Fulham"
-        },
-        {
-            value: 35420,
-            name: "Haringey"
-        },
-        {
-            value: 38880,
-            name: "Harrow"
-        },
-        {
-            value: 36670,
-            name: "Havering"
-        },
-        {
-            value: 37040,
-            name: "Hillingdon"
-        },
-        {
-            value: 35330,
-            name: "Hounslow"
-        },
-        {
-            value: 39790,
-            name: "Islington"
-        },
-        {
-            value: 55620,
-            name: "Kensington and Chelsea"
-        },
-        {
-            value: 43940,
-            name: "Kingston upon Thames"
-        },
-        {
-            value: 38490,
-            name: "Lambeth"
-        },
-        {
-            value: 35900,
-            name: "Lewisham"
-        },
-        {
-            value: 41960,
-            name: "Merton"
-        },
-        {
-            value: 28780,
-            name: "Newham"
-        },
-        {
-            value: 36860,
-            name: "Redbridge"
-        },
-        {
-            value: 53470,
-            name: "Richmond upon Thames"
-        },
-        {
-            value: 37100,
-            name: "Southwark"
-        },
-        {
-            value: 39940,
-            name: "Sutton"
-        },
-        {
-            value: 34930,
-            name: "Tower Hamlets"
-        },
-        {
-            value: 33080,
-            name: "Waltham Forest"
-        },
-        {
-            value: 47480,
-            name: "Wandsworth"
-        },
-        {
-            value: 47510,
-            name: "Westminster"
-        }
-    ];
+  FinIncomeData2013 = [{
+      value: 63620,
+      name: "City of London"
+    },
+    {
+      value: 29420,
+      name: "Barking and Dagenham"
+    },
+    {
+      value: 40530,
+      name: "Barnet"
+    },
+    {
+      value: 36990,
+      name: "Bexley"
+    },
+    {
+      value: 32140,
+      name: "Brent"
+    },
+    {
+      value: 43060,
+      name: "Bromley"
+    },
+    {
+      value: 43750,
+      name: "Camden"
+    },
+    {
+      value: 37000,
+      name: "Croydon"
+    },
+    {
+      value: 36070,
+      name: "Ealing"
+    },
+    {
+      value: 33110,
+      name: "Enfield"
+    },
+    {
+      value: 35350,
+      name: "Greenwich"
+    },
+    {
+      value: 35140,
+      name: "Hackney"
+    },
+    {
+      value: 43820,
+      name: "Hammersmith and Fulham"
+    },
+    {
+      value: 35420,
+      name: "Haringey"
+    },
+    {
+      value: 38880,
+      name: "Harrow"
+    },
+    {
+      value: 36670,
+      name: "Havering"
+    },
+    {
+      value: 37040,
+      name: "Hillingdon"
+    },
+    {
+      value: 35330,
+      name: "Hounslow"
+    },
+    {
+      value: 39790,
+      name: "Islington"
+    },
+    {
+      value: 55620,
+      name: "Kensington and Chelsea"
+    },
+    {
+      value: 43940,
+      name: "Kingston upon Thames"
+    },
+    {
+      value: 38490,
+      name: "Lambeth"
+    },
+    {
+      value: 35900,
+      name: "Lewisham"
+    },
+    {
+      value: 41960,
+      name: "Merton"
+    },
+    {
+      value: 28780,
+      name: "Newham"
+    },
+    {
+      value: 36860,
+      name: "Redbridge"
+    },
+    {
+      value: 53470,
+      name: "Richmond upon Thames"
+    },
+    {
+      value: 37100,
+      name: "Southwark"
+    },
+    {
+      value: 39940,
+      name: "Sutton"
+    },
+    {
+      value: 34930,
+      name: "Tower Hamlets"
+    },
+    {
+      value: 33080,
+      name: "Waltham Forest"
+    },
+    {
+      value: 47480,
+      name: "Wandsworth"
+    },
+    {
+      value: 47510,
+      name: "Westminster"
+    }
+  ];
 
     GreenData = [
         //area of greenspace
@@ -1710,7 +1653,7 @@ function animate() {
     var minBor = currentArray[list[0]];
     var maxBor = currentArray[list[1]];
 
-    if (!obj4.ShowMinMax) {
+    if (!ShowMinMax) {
         //scene.children[1].children[32].material.opacity = 0.1;
         for (let i = 0; i < 34; i++) {
 
@@ -1780,7 +1723,7 @@ function render() {
             // console.log(checkVal(String(INTERSECTED.name)));
             switch (controller) {
                 case 0:
-                    info.innerHTML = '<br>' + INTERSECTED.name + '<br>' + 'Total Income: £' + checkVal(INTERSECTED.name) + '';
+                    info.innerHTML = '<div style="margin-top:35%;">' +'<h6>'+'<b>'+ INTERSECTED.name+'</b>'+'</h6>' + 'Total Income: £' + checkVal(INTERSECTED.name) + '</div>';
                     break;
                 case 1:
                     info.innerHTML = '<br>' + INTERSECTED.name + '<br>' + 'Area of Greenspace: ' + checkVal(INTERSECTED.name) + '';
@@ -1790,7 +1733,7 @@ function render() {
 
     } else {
 
-        if (INTERSECTED) //I dont get how this works
+        if (INTERSECTED) //not sure I get how this works
             INTERSECTED.material.emissive.setHex(INTERSECTED.currentHex);
 
         //INTERSECTED.material.opacity = 0.9;
