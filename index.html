@@ -438,7 +438,7 @@ Our vision is to be able to provide the general public as well as policy makers 
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="aboot">
   <div class="w3-row-padding">
     <div class="w3-col m6">
-      <h3>Aims, Hypotheses and Assumptions</h3>
+      <h3>Aims and Hypotheses</h3>
       <div class="ahhtext"
       <p>Our aim is to explore what correlates with poverty - as measured by income - in London. We will look at various variables that represent a spectrum of factors that have been shown to be correlated with poverty in different settings, such as health, physical activity, and availability of green spaces.
 
@@ -466,7 +466,6 @@ This data is organised and measured by borough (Barking and Dagenham, Barnet, Be
 <div class="w3-container w3-sand" style="padding:128px 16px" id="litrev">
 
 <h3 class="w3-center">Literature Review</h3>
-  <p class="w3-center w3-large">How does poverty relate to other living factors (pollution, health, education) in London?</p>
     <div class="w3-row-padding" style="margin-top:32px">
 <div class="text">
  <p>Poverty - or low income - is considered to be a deciding factor in defining one's socioeconomic status. Many studies have investigated what poverty is associated with; specifically, what other aspects influence the life of people that live in poverty.</p>
@@ -494,32 +493,36 @@ In conclusion, the current literature highlights that knowing what associates wi
   <h3 class="w3-center">DATA</h3>
   <p class="w3-center w3-large">Basic information</p>
   <div class="text">
-<p> All of our data came from the London Data Store (LDS), an official and local body for Greater London which consists of the Mayor of London, currently Sadiq Khan (Labour) and the London Assembly, all of whom are elected by the people. Most data is in the form of data tables in the CSV format, PDF files and Excel files, with data entries for each of the 32 London boroughs and the City of London. The individual datasets, while all provided by the London Data Store, were measured by different authorities:
-  <li>Physical activity of kids in schools or shortened to active kids which corresponds to the percentage of kids that have access to at least 2h of physical activity in schools in 2007/2008 comes from the Annual Survey of School Sport Partnerships on behalf of the Department for Children, Schools and Families by TNS Social Research: find the raw data <a class="newcolor" href="https://data.london.gov.uk/dataset/physically-active-children-borough">here</a>
-</li><li>Income which corresponds to the average income of taxpayers in each borough in 2014/2015 comes from the Greater London Authority: find the raw data <a class="newcolor" href="https://data.london.gov.uk/dataset/average-income-tax-payers-borough">here</a>
-</li><li>Green Space which corresponds to percentage land use for green spaces per borough in 2005 which comes from the Department for Communities and Local Government: find the raw data <a class="newcolor" href="https://data.london.gov.uk/dataset/land-use-ward">here</a>
+
+
+
+<p> All of our data came from the London Data Store (LDS), an official and local body for Greater London which consists of the Mayor of London, currently Sadiq Khan (Labour) and the London Assembly ("About-London Datastore," n.d.), all of whom are elected by the people. Most data is in the form of data tables in the CSV format, PDF files and Excel files, with data entries for each of the 32 London boroughs and the City of London. The individual datasets, while all provided by the London Data Store, were measured by different authorities:
+<li>Income which corresponds to the average income of taxpayers in each borough in 2014/2015 comes from the Greater London Authority: find the raw data <a class="newcolor" href="https://data.london.gov.uk/dataset/average-income-tax-payers-borough">here</a>
+
+</li><li>Physical activity of children in schools (abbreviated to "active kids") which corresponds to the percentage of kids that have access to at least 2h of physical activity in schools in 2007/2008; this comes from the Annual Survey of School Sport Partnerships on behalf of the Department for Children, Schools and Families by TNS Social Research: find the raw data <a class="newcolor" href="https://data.london.gov.uk/dataset/physically-active-children-borough">here</a>
+</li><li>Green Spaces which corresponds to percentage area of green spaces per borough in 2005 which comes from the Department for Communities and Local Government: find the raw data <a class="newcolor" href="https://data.london.gov.uk/dataset/land-use-ward">here</a>
 </li><li>Life Expectancy which corresponds to the mean life expectancy at age 65 in London boroughs in 2012/2013 which comes from the Office for National Statistics: find the raw data <a class="newcolor" href="https://data.london.gov.uk/dataset/life-expectancy-birth-and-age-65-ward">here</a>
-</li><li>Drug use which corresponds to the numbers of people in contact with drug action teams comes from the National Treatment Agency for Substance Misuse (now Public Health England) find the raw data
+</li><li>Drug use which corresponds to the number of people in contact with drug action teams comes from the National Treatment Agency for Substance Misuse (now Public Health England): find the raw data
 	<a class="newcolor" href="https://data.london.gov.uk/dataset/drug-treatment-rates">here</a> </li>
 
 </p>
  <p class="w3-center w3-large">Is the London Data Store a reliable source?</p>
 <p>Being published by an official, reputable and accountable source gives the impression that the data is reliable. However, we remain aware that data collected under government parties (as it is currently) means there may be a political agenda underlying it. For example, Sadiq Khan is very outspoken about his wishes to clean London’s air and so may manipulate the data to make air quality seem worse than it actually is. However we feel this would be difficult to do, as the London Assembly are elected to examine decisions and actions taken by the Mayor, who they hold publicly and democratically accountable.<br>Furthermore, it is possible that some of the data, such as income data, are estimates or based on surveys. As such the appropriate caution was taken via team awareness of potential issues however we believe discrepancies in data wouldn't be too problematic and would also still paint an accurate picture of incomes per borough <b>relative</b> to each other</p>
- <p class="w3-center w3-large">Why did we choose these datasets?</p>
+ <p class="w3-center w3-large">Why did we choose these particular datasets?</p>
  <p>We assume that the factors investigated are representative of wider thematics. For example, we assume that area of green space is a valid indicator of environmental quality; physical activity of children in schools is a valid indicator of both physical activity and quality of education; life expectancy and drug use are valid indicators of health. While we acknowledge that none of the wider thematics can be reduced to these indicators alone, we believe the indicators chosen reveal relevant and important information concerning these areas.
 
  </p>
 
 
- <p class="w3-center w3-large">What problems were encountered regarding the data?</p>
+ <p class="w3-center w3-large">What problems were encountered regarding the data and data cleaning?</p>
 <p>The majority of our issues arised in the data cleaning process. Due to the internationalisation on some of our laptops, converting ExCel files to CSV was difficult and we lost some data during the conversion. To work around this however, we would copy-paste the data from ExCel into Google Sheets, and export it into a CSV from there. After that it could be easily uploaded and manipulated on Python via Azure Notebooks.
 </p>
-<p>Due to the City of London's status as a "principal division" (rather than Borough) of London, its data was occasionally not included in our chosen datasets. This was the case with our "Active Kids" and "Life Expectancy" datasets. As such, we had to estimate what the missing values may have been. For the former we looked at all the schools in the City of London and estimated this value. For the latter we did not estimate a value for the statistical analysis since we had no reliable way to search for this data. However, for the purposes of the colourmap visualisation, we took the average of all the other values to allow the visualisation to work.
+<p>Due to the City of London's status as a "principal division" (rather than Borough) of London, its data was occasionally not included in our chosen datasets. This was the case with our "Active Kids" and "Life Expectancy" datasets. As such, we had to estimate what the missing values may have been. For the former we looked at all the schools in the City of London and estimated this value. For the latter we did not estimate a value for the statistical analysis since we had no reliable way to search for this data. However, for the purposes of the chloropleth map visualisation, we took the average of all the other values to allow the visualisation to work.
 </p>
 
  <p class="w3-center w3-large">Ethical considerations</p>
  <p>Anonymity is an ethical consideration present whenever working with big data. The nature of the data and data source means anonymity should not be an issue. Because the data is available for boroughs of large populations, anonymity is well secured – there are no populations that are small enough that could allow for cross-checking with other data sets. In data analysis it is important to be aware of the potential identification of the people who provide the data. However it also poses a problems in that such anonymity forces us to make assumptions in our data analysis – it would be impossible to prove causation, only correlation.
-<br>Furthermore, another consideration when utilising big data is that many of the safeguards and considerations in traditional social research are not present in the creation of big data, particularly with regards to privacy and informed consent. Privacy is recognised as a human right under numerous declarations and treaties. In the UK, the European Convention on Human Rights, which has statutes concerning privacy rights, has been implemented through the Human Rights Act 1998, with protection of personal data provided by the Data Protection Act 1998. However, authorities that collect big data are often able to skirt the protections imposed. This is especially of concern with the household income, physically active children, and drug treatment rate datasets, which concern the livelihoods of people and depend on recording information that could be considered sensitive and private by some.
+<br>Furthermore, another consideration when utilising big data is that many of the safeguards and considerations in traditional social research are not present in the creation of big data, particularly with regards to privacy and informed consent. Privacy is recognised as a human right under numerous declarations and treaties. In the UK, the European Convention on Human Rights, which has statutes concerning privacy rights, has been implemented through the Human Rights Act 1998, with protection of personal data provided by the Data Protection Act 1998 (Your right to respect for private and family life, n.d.; Data protection - GOV.UK, n.d.) However, authorities that collect big data are often able to skirt the protections imposed. This is especially of concern with the household income, physically active children, and drug treatment rate datasets, which concern the livelihoods of people and depend on recording information that could be considered sensitive and private by some.
 </p>
 
 </div>
@@ -537,7 +540,7 @@ In conclusion, the current literature highlights that knowing what associates wi
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="methods">
 
   <h3 class="w3-center">Methods</h3>
-  <p class="text">This section outlines the methods we used in our research. For the reasons why we used these methods please refer to the visualisation section in which we outline what we decided to do with the data, the conclusions we could take from each of the visusalitions and why these led us to develop our work as we did.
+  <p class="text">This section outlines the methods we used in our research. For the reasons why we used these methods please refer to the <a href="#datavis">visualisation</a> section in which we outline what we decided to do with the data, the conclusions we could take from each of the visusalitions and why these led us to develop our work as we did.
 </p>
 
 <h3 class="w3-center">Data and Statistics</h3>
@@ -573,25 +576,29 @@ In conclusion, the current literature highlights that knowing what associates wi
 </p>
 <p class="w3-center"><img src="https://lh4.googleusercontent.com/w0B7WkWQ_fDj3oTEUpvMNM0pFwCooIsxXnlg5zFIqckOZCEtysS-36sfX-DlECLukMuL6Px9fcWaX1R9aHg-e46RI8U7P3m_3ySMneUdz6Z8j7k0-silHLHICSFhhi2GXCubhJF9" style="border:solid"></p>
 <p class="text">The Spearman coefficient is more robust to extreme outliers than the Pearson coefficient because it limits the value of the outlier to its rank. However, it can’t tell us whether the relationship between the variables is linear or otherwise. Furthermore, the ranking washes out some of the correlation, as we can no longer tell how much Y increased as a result of X. We can interpret the Spearman Correlation Coefficient to be how sure we are that there is a correlation, and the Pearson Correlation Coefficient to represent how linear the relationship is.
-<br>We will address these limitations by using both methods on our data and comparing the results between them
+<br>We will address these limitations by using both methods on our data and comparing the results between them.</p>
+<p class="w3-large text_again">Weak, Medium and Strong Correlations</p>
+
+
+<p class="text">We will be interpreting our Pearson and Spearman Correlation Coefficients based on the assignations for weak to strong correlations from the website statstutor. (Resources for 03. Teach Yourself Worksheets > Pearsons Correlation Coefficient from statstutor,” n.d.; Resources for 03. Teach Yourself Worksheets > Spearmans Correlation Coefficient from statstutor, n.d.)
 </p>
 
 </div></div>
 
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="limits">
 
-<h3 class="w3-center">Visualisations</h3>
+<h3 class="w3-center">Visualisation Methods</h3>
 <p class="w3-center w3-large">How did we create the visualisations we use? <br>(click <a href="#datavis">here</a> to see the results of these methods)</p>
 
     <div class="w3-row-padding" style="margin-top:32px">
       <p class="w3-large text_again">Bar Charts</p>
 
-    <p class="text">We created bar charts for each variable, which allowed us to check that our values were working etc. (for example, the bar chart wouldn’t work until there were no N/A values, and all the values were stored as integers or floats.)
+    <p class="text">We created bar charts (using Python Azure Notebooks) for each variable, which allowed us to check that our values were working etc. (for example, the bar chart wouldn’t work until there were no N/A values, and all the values were stored as integers or floats.)
 
 </p>
 <p class="w3-center"> <img src="https://lh4.googleusercontent.com/-yWJATA-tavP7-IUevhoo2AG-yo_ASay828x4Bbr8sFcJnp8lJzMdfPSy_2Coup4uwDUjkCKlVfKNrl3GpOo3Sw1UyVjV2pD2SAZlL247A2zc0iuUrl75xMmZXcW9hi50HpGXjKa" style="border:solid"></p>
 <p class="w3-large text_again">Scatter Plots</p>
-<p class="text">We created scatter plots for each variable vs. income, for example:</p>
+<p class="text">We created scatter plots (also using Python) for each variable vs. income, for example:</p>
 <p class="w3-center"><img src="https://lh4.googleusercontent.com/jE7XJW7oNuasOrI2BZGUz6mFtNsv-4v_h_gIPrFEAuYjWW1WCP-PrlA0n-XQmN5ej-Onbok47LKBEomtAfTixrbZYtqqlifTdzY7JGlYlaU2aU1Zy7Rx4-kKzdjT_or_gjQwxTs-" style="border:solid"></p>
 <p class="text">We also made ranked scatter plots. For this we first ranked the data - we ranked the London Boroughs in terms of income and in terms of the variable, so that we could plot them against each other for a scatter plot and regression line, for example:
 </p>
@@ -664,7 +671,7 @@ In conclusion, the current literature highlights that knowing what associates wi
 </p>
 
 <p class="text">These scatterplots allow us to see the relationship between income per borough and the other 4 variables that we looked at in a better and clearer way. We added a line of best fit so that we can better see if the relationship tends to be positive - so if one variable increases the other increases as well - or negative - if one increases the other decreases.
-<br>We did this for both ranked and nonranked values (for more explanation on this go to the <a href="#limits">“Methods”</a> section). Through it we can see that there seems to be some relationship between some of the variables, for example, income and active kids. However, we can’t tell how strong the relationship is. For this we need statistical methods that allow us to evaluate the strength of a relationship. We did this by calculating the Pearson and Spearman correlation values for each relation - check the <a href="#statanalysis">statistical analysis</a> section.
+<br>We did this for both ranked and nonranked values (for more explanation on this go to the <a href="#limits">“Methods”</a> section). Through it we can see that there seems to be some relationship between some of the variables, for example, income and active kids. However, we can’t tell how strong the relationship is. For this we need statistical methods that allow us to evaluate the strength of a relationship. We did this by calculating the Pearson and Spearman correlation coefficients for each relation - check the <a href="#statanalysis">statistical analysis</a> section.
 </p>
 
 </div></div>
@@ -921,15 +928,16 @@ In conclusion, the current literature highlights that knowing what associates wi
     <h1>Reimagining visualising income</h1>
     <h3>A Dorling Cartogram</h3>
     <p>
-      Following on our analysis, we thought how we could to present the data and the association between the variables in a better way and in relation to the physical space they are in. We therefore wondered how best to create a map that would show this.
-  All maps put forward and argument and representing various variables and relations means that some aspects will be distorted. We decided that a dorling cartogram was the best way to present our data and its associations. These cartograms distort the physical boundaries between boroughs, however, by doing so they allow us to focus on how the variables change from borough to borough as well as how they relate to income.
-  </p>
+      Following on our analysis, we thought how we could to present the data and the association between the variables in a better way and in relation to the physical space they are in. We therefore wondered how best to create a map that would show this. All
+       maps put forward and argument and representing various variables and relations means that some aspects will be distorted. We decided that a dorling cartogram was the best way to present our data and its associations. These cartograms distort the
+       physical boundaries between boroughs, however, by doing so they allow us to focus on how the variables change from borough to borough as well as how they relate to income.  </p>
 </div>
     <h3 style="margin-left:35px">Comparing Income Against Other Data</h3>
     <div style:"border: 0px solid blue; margin-right: 40%; margin-left: 5%">
     <p class="text_justas" style:"padding-right:60px">
-      The dorling cartogram here presented shows the various variables looked at. When one clicks on a variable, the diameters of each circle - that represent a borough - are proportional to the value of that variable in that borough. So, for example, a borough with a bigger circle for drug use will have a higher value of drug use. More so, the colour of each circle represents the level of income in that borough (see the description of the colours on the left hand side of the picture). If puts the computer mouth on a circle, the values of all variables for that borough will also show.
-</p>
+      The dorling cartogram here presented shows the various variables looked at. When one clicks on a variable, the diameters of each circle - that represent a borough - are proportional to the value of that variable in that borough. So, for example, a borough
+      with a bigger circle for drug use will have a higher value of drug use. More so, the colour of each circle represents the level of income in that borough (see the description of the colours on the left hand side of the picture). If puts the computer
+      mouse on a circle, the values of all variables for that borough will also show.</p>
   </div>
 </div>
 
