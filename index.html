@@ -864,25 +864,25 @@ In conclusion, the current literature highlights that knowing what associates wi
           .anchor("bottom").add(pv.Label)
             .text(function(d) cats[cats.length-this.index-1]);
 
-        vis.add(pv.Dot)
-          .data(nodes)
-          .left(function(d) d.x)
-          .top(function(d) d.y)
-          .radius(function(d) d.r)
-          .fillStyle(function(d) col(borough_stats2[d.code].income))
-          .strokeStyle(null)
-          .title(function(d) borough_stats2[d.code].name + "\nIncome: £" +borough_stats2[d.code].income+
-          "\nLife Exp. at 65: "+borough_stats2[d.code].life+
-          "\nGreen Spaces: "+borough_stats2[d.code].green+
-          "\nActive Kids: "+borough_stats2[d.code].kids+
-          "\nDrug Contact: "+borough_stats2[d.code].drugs)// + borough_stats2[d.code].obese[borough_stats2.yearIdx(year)] + "%"
-          .add(pv.Label)
-          .text(function(d) d.code)
-        //  .textStyle("#fee")
-          .font(function(d)
-           + (2.9 * Math.log(d.r)).toFixed(0) + "px sans-serif")
-          .textAlign("center")
-          .textBaseline("middle");
+            vis.add(pv.Dot)
+                .data(nodes)
+                .left(function(d) d.x)
+                .top(function(d) d.y)
+                .radius(function(d) d.r)
+                .fillStyle(function(d) col(borough_stats2[d.code].income))
+                .strokeStyle(null)
+                .title(function(d) borough_stats2[d.code].name + "\nIncome: £" +borough_stats2[d.code].income+
+                "\nLife Expectancy at 65: "+borough_stats2[d.code].life+" years"+
+                "\nGreen Spaces: "+borough_stats2[d.code].green+" meters sq. / 1000 res."+
+                "\nActive Kids: "+borough_stats2[d.code].kids+"%"+
+                "\nDrug Contact: "+borough_stats2[d.code].drugs+"%")// + borough_stats2[d.code].obese[borough_stats2.yearIdx(year)] + "%"
+                .add(pv.Label)
+                .text(function(d) d.code)
+              //  .textStyle("#fee")
+                .font(function(d)
+                 + (2.9 * Math.log(d.r)).toFixed(0) + "px sans-serif")
+                .textAlign("center")
+                .textBaseline("middle");
 
 
 
@@ -923,23 +923,30 @@ In conclusion, the current literature highlights that knowing what associates wi
     </div>
   </div>
 
-  <div style="border: 0px solid blue; margin-left: 60%; margin-right: 5%">
 
-    <h1>Reimagining visualising income</h1>
-    <h3>A Dorling Cartogram</h3>
-    <p>
-      Following on our analysis, we thought how we could to present the data and the association between the variables in a better way and in relation to the physical space they are in. We therefore wondered how best to create a map that would show this. All
-       maps put forward and argument and representing various variables and relations means that some aspects will be distorted. We decided that a dorling cartogram was the best way to present our data and its associations. These cartograms distort the
-       physical boundaries between boroughs, however, by doing so they allow us to focus on how the variables change from borough to borough as well as how they relate to income.  </p>
-</div>
-    <h3 style="margin-left:35px">Comparing Income Against Other Data</h3>
-    <div style:"border: 0px solid blue; margin-right: 40%; margin-left: 5%">
-    <p class="text_justas" style:"padding-right:60px">
-      The dorling cartogram here presented shows the various variables looked at. When one clicks on a variable, the diameters of each circle - that represent a borough - are proportional to the value of that variable in that borough. So, for example, a borough
-      with a bigger circle for drug use will have a higher value of drug use. More so, the colour of each circle represents the level of income in that borough (see the description of the colours on the left hand side of the picture). If puts the computer
-      mouse on a circle, the values of all variables for that borough will also show.</p>
+  <div style=" border: 0px solid blue">
+    <h2>Reimagining visualising income</h2>
+    <div style=" border: 0px solid red;margin-left:auto; margin-right:0">
+
+
+      <h3>A Dorling Cartogram</h3>
+      <p>
+        Following on our analysis, we thought how we could present the data and the association between the variables in a better way and in relation to the physical space they are in. We therefore wondered how to best create a map that would show this. All
+        maps put forward and argument and representing various variables and relations means that some aspects will be distorted. We decided that a Dorling cartogram was the best way to present our data and its associations. These cartograms distort the
+        physical boundaries between boroughs, however, by doing so they allow us to focus on how the variables change from borough to borough as well as how they relate to income.
+      </p>
+    </div>
+
+    <div style=" border: 0px solid red">
+      <h3>Comparing Income Against Other Data</h3>
+      <p>
+        The Dorling cartogram here presented shows the various variables looked at. When one clicks on a variable, the diameters of each circle - that represent a borough - are proportional to the value of that variable in that borough. So, for example, a borough
+        with a bigger circle for drug use will have a higher value of drug use. More so, the colour of each circle represents the level of income in that borough (see the description of the colours on the left hand side of the picture). If puts the computer
+        mouth on a circle, the values of all variables for that borough will also show.
+      </p>
+    </div>
   </div>
-</div>
+  Justas Brazauskas
 
 
 
